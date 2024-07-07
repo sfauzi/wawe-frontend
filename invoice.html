@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="frontend/styles/invoice.css">
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- main section start -->
+        <main>
+            <div class="title-section">
+                <h1>Invoice</h1>
+                <p class="desc-title">Unduh bukti pembayaran kelas Premium <br>sebagai dokumentasi pribadi</p>
+            </div>
+
+            <div class="invoice-container">
+                <div class="invoice-header">
+                    <div class="logo">
+                        <img src="frontend/images/logo.png" alt="Company Logo">
+
+                    </div>
+                    <div class="invoice-details">
+                        <div class="id-number">Issued 7 July 2024</div>
+                        <div class="status">Status: SUCCESS</div>
+                    </div>
+                </div>
+                <div class="invoice-info">
+                    <h2 class="id-invoice">#DDA323</h2>
+                    <p class="">Mamuju NTT</p>
+                </div>
+                <hr class="separator">
+                <div class="invoice-section">
+                    <div class="bill-from">
+                        <h3>Bill From:</h3>
+                        <p>Your Company Name<br>123 Main Street<br>City, State ZIP<br>Country</p>
+                    </div>
+                    <div class="bill-to">
+                        <h3>Bill To:</h3>
+                        <p>Client Name<br>456 Park Avenue<br>City, State ZIP<br>Country</p>
+                    </div>
+                </div>
+                <div class="invoice-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Product A</td>
+                                <td>$100</td>
+                                <td>2</td>
+                                <td>$200</td>
+                            </tr>
+                            <!-- Masukkan baris produk lainnya sesuai dengan kebutuhan -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="invoice-footer">
+                    <p>Terima kasih telah mempercayai kami. <br>
+                        WaWe Tour and Travel.</p>
+                    <button class="print-button">Print Invoice</button>
+                </div>
+            </div>
+        </main>
+        <!-- main section end -->
+    </div>
+
+</body>
+
+<script src="frontend/scripts/dashboard.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
+</html>

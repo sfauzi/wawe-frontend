@@ -1,0 +1,108 @@
+
+/* Gaya untuk list tiket */
+main .ticket-list {
+    margin-top: 2rem;
+}
+/* Gaya untuk setiap kartu tiket */
+.ticket-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    align-items: center; /* Untuk memusatkan konten secara vertikal */
+    height: 120px; /* Mengatur tinggi kartu */
+    padding: 1rem;
+    margin-bottom: 1rem; /* Jarak antara setiap kartu */
+}
+
+/* Gaya untuk gambar cover tiket */
+.ticket-cover {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem; /* Memberikan jarak antara gambar dan teks */
+    margin-left: 1rem; /* Memberikan jarak antara gambar dan tepi kiri */
+}
+
+/* Gaya untuk detail tiket */
+.ticket-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Menyusun elemen vertikal */
+    justify-content: space-between;
+}
+
+/* Kontainer untuk judul dan harga */
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items secara vertikal di tengah */
+    margin-bottom: 0.5rem; /* Memberikan jarak bawah */
+}
+
+/* Gaya untuk judul tiket */
+.ticket-title {
+    font-size: 1rem; /* Mengatur ukuran font */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Gaya untuk harga tiket */
+.ticket-price {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Gaya untuk status dan tombol */
+.ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+/* Gaya untuk status tiket */
+.ticket-status {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Warna untuk status */
+.ticket-status.success {
+    background-color: #2ecc71;
+}
+
+.ticket-status.pending {
+    background-color: #f39c12;
+}
+
+.ticket-status.failed {
+    background-color: #e74c3c;
+}
+
+/* Gaya untuk aksi tiket (tombol) */
+.detail-button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.detail-button:hover {
+    background-color: #2980b9;
+}
+
+/* Efek hover untuk kartu tiket */
+.ticket-card:hover {
+    transform: translateY(-2px);
+}

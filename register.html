@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Register</title>
+    <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css" />
+    <link rel="stylesheet" href="frontend/libraries/gijgo/css/gijgo.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="frontend/styles/auth.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</head>
+
+
+<body>
+
+    <div class="login-container">
+        <div class="background-image-register"></div>
+        <div class="login-card">
+            <div class="card-content">
+                <div class="logo">
+                    <!-- Place your logo image here -->
+                    <img src="frontend/images/logo.png" alt="Logo">
+                </div>
+                <div class="title">
+                    <h1>Register</h1>
+                    <p>Welcome back! Please login to your account.</p>
+                </div>
+                <form action="#" method="POST">
+                    <div class="form-input">
+                        <span class="input-icon"><ion-icon name="person-circle-outline"></ion-icon></i></span>
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-input">
+                        <span class="input-icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" name="name" placeholder="Email" required>
+                    </div>
+                    <div class="form-input">
+                        <span class="input-icon"><ion-icon name="person-circle-outline"></ion-icon></i></span>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-input">
+                        <span class="input-icon"><ion-icon name="key-outline"></ion-icon></i></span>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <!-- <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div> -->
+                    <div class="action-buttons">
+                        <button type="button" class="login-button"onclick="window.location.href = 'index.html';">Register</button>
+                        <button type="submit" class="register-button" 
+                            onclick="window.location.href = 'login.html';">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="frontend/scripts/main.js"></script>
+    <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
+    <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>

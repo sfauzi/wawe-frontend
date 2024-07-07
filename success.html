@@ -14,6 +14,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="frontend/styles/main.css" />
 
 
@@ -40,7 +45,72 @@
     </div>
 
     <main>
-        <div class="section-success d-flex align-items-center">
+
+        <div class="success-message">
+            <h1>Booking Successfully <br>Congratulations🎉</h1>
+        </div>
+
+        <section class="section-scs-header"></section>
+        <div class="card-container">
+            <div class="custom-card">
+                <div class="card-content">
+                    <div class="product-info">
+                        <div class="product-image">
+                            <img src="frontend/images/landing.png" alt="Product Image">
+                        </div>
+                        <div class="product-details">
+                            <h2 class="product-title">Nama Produk</h2>
+                            <div class="product-status">
+                                <p>SUCCESS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <span class="icon">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            <!-- Ganti dengan ikon Font Awesome yang sesuai -->
+                        </span>
+                        <div class="icon-description">
+                            <p>15-6-2024</p>
+                        </div>
+                        <span class="icon">
+                            <ion-icon name="people-outline"><!-- Ganti dengan ikon Font Awesome yang sesuai -->
+                        </span>
+                        <div class="icon-description">
+                            <p>1 person</p>
+                        </div>
+                        <span class="icon">
+                            <ion-icon
+                                name="pricetag-outline"></ion-icon><!-- Ganti dengan ikon Font Awesome yang sesuai -->
+                        </span>
+                        <div class="icon-description">
+                            <p>Open Trip</p>
+                        </div>
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon><!-- Ganti dengan ikon Font Awesome yang sesuai -->
+                        </span>
+                        <div class="icon-description">
+                            <p>Rp 150.000</p>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <div class="description">
+                        <h3>What's Next?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero et
+                            fringilla.</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="action-button">Message Owner</button>
+                        <button class="action-button-secondary">Explore Again</button>
+                        <button class="action-button-secondary" onclick="window.location.href = 'dashboard.html';">My
+                            Dashboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="section-success d-flex align-items-center">
             <div class="col text-center">
                 <img src="frontend/images/success.png" alt="">
                 <h1>Yay! Success</h1>
@@ -53,10 +123,16 @@
                     Home Page
                 </a>
             </div>
-        </div>
+        </div> -->
+
+        <!-- Footer -->
+        <!-- <footer>
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </footer> -->
+
     </main>
 
-    
+
 
     <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
     <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>

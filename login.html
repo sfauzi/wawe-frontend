@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css" />
     <link rel="stylesheet" href="frontend/libraries/gijgo/css/gijgo.min.css" />
@@ -14,46 +15,83 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="frontend/styles/main.css" />
+
+
+    <link rel="stylesheet" href="frontend/styles/auth.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
 </head>
 
+
 <body>
 
-    
-    <main class="login-container">
+    <div class="login-container">
+        <div class="background-image-login"></div>
+        <div class="login-card">
+            <div class="card-content">
+                <div class="logo">
+                    <!-- Place your logo image here -->
+                    <img src="frontend/images/logo.png" alt="Logo">
+                </div>
+                <div class="title">
+                    <h1>Login</h1>
+                    <p>Welcome back! Please login to your account.</p>
+                </div>
+                <form action="#" method="POST">
+                    <div class="form-input">
+                        <span class="input-icon"><ion-icon name="person-circle-outline"></ion-icon></i></span>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-input">
+                        <span class="input-icon"><ion-icon name="key-outline"></ion-icon></i></span>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <div class="action-buttons">
+                        <button type="submit" class="login-button"
+                            onclick="window.location.href = 'index.html';">Login</button>
+                        <button type="button" class="register-button" onclick="window.location.href = 'register.html';">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <main class="login-container">
         <div class="container">
             <div class="row page-login d-flex align-items-center">
-                <div class="section-left col-12 col-6">
-                    <h1 class="mb-4">We explore the new <br>life much better
-                    </h1>
-                    <img src="frontend/images/logo.png" class="w-75 d-none d-sm-flex" alt="">
-
+                <div class="section-left col-12 col-md-6">
+                    <h1 class="mb-4">We explore the new <br /> life much better</h1>
+                    <img src="frontend/images/login bg.png" alt="" class="w-75 d-none d-sm-flex">
                 </div>
-                <div class="section-right col-12 col-4">
+                <div class="section-right col-12 col-md-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="text-center">
-                                <img src="frontend/images/logo.png" class="w-50 mb-4" alt="">
+                                <img src="frontend/images/logo.png" alt="" class="w-50 mb-4">
                             </div>
                             <form>
                                 <div class="form-group">
                                     <label for="exampleInputEmail">Email Address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                                    <input type="email" class="form-control" id="exampleInputEmail"
+                                        aria-describedby="emailHelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword">
+                                    <label for="examplePassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
                                 </div>
                                 <div class="form-group form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Remeber me</label>
-                                </div>
-                                <button type="submit" class="btn btn-login btn-block">
-                                    Sign In
-                                    
-                                </button>
+                                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                                  </div>
+
+                                <button type="submit" class="btn btn-login btn-block">Sign in</button>
                                 <p class="text-center mt-4">
                                     <a href="#">Saya lupa password</a>
                                 </p>
@@ -63,11 +101,12 @@
                 </div>
             </div>
         </div>
-    </main>
+
+    </main> -->
 
 
-    
-    <script src="frontend/libraries/retina/retina.min.js"></script>
+
+
     <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
     <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
 </body>

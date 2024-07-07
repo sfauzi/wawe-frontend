@@ -12,7 +12,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="frontend/styles/main.css">
+
+    <link rel="stylesheet" href="frontend/styles/swiper-bundle.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </head>
 
@@ -20,7 +30,7 @@
 
     <!-- Navbar -->
     <div class="container">
-        <nav class="row navbar navbar-expand-lg navbar-light bg-white">
+        <nav class="row navbar navbar-expand-lg navbar-light bg-white" id="navbar">
             <a href="#" class="navbar-brand">
                 <img src="frontend/images/logo.png" alt="Logo Poling" />
             </a>
@@ -30,8 +40,8 @@
 
             </button>
 
-            <div class="collapse navbar-collapse" id="navb">
-                <ul class="navbar-nav ml-auto mr-3">
+            <div class="collapse navbar-collapse justify-content-center" id="navb">
+                <ul class="navbar-nav">
                     <li class="nav-item mx-md-2"><a href="#" class="nav-link active">Home</a></li>
                     <li class="nav-item mx-md-2"><a href="#" class="nav-link">Paket Healing</a></li>
                     <li class="nav-item dropdown">
@@ -46,21 +56,36 @@
                     </li>
                     <li class="nav-item mx-md-2"><a href="#" class="nav-link">Testimonial</a></li>
                 </ul>
+                <!-- Tambahkan tombol login di dalam collapse agar muncul di mobile -->
+                <a href="login.html" class="btn btn-login ml-auto d-lg-none">Login</a>
 
-                <!-- Mobile Button -->
-                <form class="form-inline d-sm-block d-md-none">
-                    <button class="btn btn-login my-2 my-sm-0">
-                        Masuk
-                    </button>
-                </form>
-
-                <!-- Desktop Button -->
-                <form class="form-inline my-2 my-lg-0 d-none d-md-block">
-                    <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
-                        Masuk
-                    </button>
-                </form>
+                <!-- Profil untuk mobile di dalam collapse -->
+            <div class="navbar-profile-mobile d-lg-none mt-3 text-center">
+                <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo">
+                <span class="profile-name ml-2">John Doe</span>
             </div>
+                
+            </div>
+            <!-- Tambahkan elemen profil di sini -->
+            <div class="navbar-profile d-none d-lg-flex align-items-center ml-auto">
+                <span class="profile-name ml-2">John Doe</span>
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo">
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <!-- Konten dropdown -->
+                        <a class="dropdown-item" href="dashboard.html">Dashboard</a>
+                        <a class="dropdown-item" href="#">Pengaturan</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Keluar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <a href="register.html" class="btn btn-register d-none d-lg-inline-block ml-lg-3">Register</a> -->
+            <!-- <a href="login.html" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</a> -->
         </nav>
     </div>
 
@@ -75,16 +100,59 @@
             <br>
             capai kebahagian bareng Poling
         </p>
-        <a href="#" class="btn btn-get-started px-4 mt-4">
+        <!-- <a href="#" class="btn btn-get-started px-4 mt-4">
             Get Started
-        </a>
+        </a> -->
+        <!-- Tombol Search -->
+        <div class="search-container">
+            <form action="#" method="get" class="search-form">
+                <input type="text" name="search" placeholder="Search..." class="search-input">
+                <button type="submit" class="btn-search">
+                    Search
+                </button>
+            </form>
+        </div>
     </header>
 
 
     <main>
         <div class="container">
             <!-- Statistik -->
-            <section class="section-stats row justify-content-center" id="stats">
+
+            <section class="section-stats" id="stats">
+                <div class="stats-card">
+                    <div class="stats-item">
+                        <i class="fa fa-users"></i>
+                        <div class="stats-content">
+                            <h2>20K</h2>
+                            <p>Members</p>
+                        </div>
+                    </div>
+                    <div class="stats-item border-left">
+                        <i class="fa fa-globe"></i>
+                        <div class="stats-content">
+                            <h2>13</h2>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                    <div class="stats-item border-left">
+                        <i class="fa fa-hotel"></i>
+                        <div class="stats-content">
+                            <h2>3K</h2>
+                            <p>Hotel</p>
+                        </div>
+                    </div>
+                    <div class="stats-item border-left">
+                        <i class="material-icons">handshake</i>
+                        <div class="stats-content">
+                            <h2>72</h2>
+                            <p>Partners</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="section-stats row justify-content-center" id="stats">
                 <div class="col-3 col-md-2 stats-detail">
                     <h2>20K</h2>
                     <p>Members</p>
@@ -101,7 +169,7 @@
                     <h2>72</h2>
                     <p>Partners</p>
                 </div>
-            </section>
+            </section> -->
         </div>
 
         <!-- Popular -->
@@ -109,7 +177,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col text-center section-popular-heading">
-                        <h2>Wisata Popular</h2>
+                        <h1>Wisata Popular</h1>
                         <p>Something that you never
                             <br>
                             before in this world
@@ -120,6 +188,83 @@
         </section>
 
         <section class="section-popular-content" id="popularContent">
+            <div class="container">
+                <div class="section-popular-travel row justify-content-center">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="details.html" class="card-link">
+                            <div class="card-travel text-center d-flex flex-column"
+                                style="background-image: url('frontend/images/landing.png');">
+                                <div class="travel-location">Bali</div>
+                                <div class="travel-price">Rp 399.000</div>
+                                <div class="travel-icons">
+                                    <ion-icon name="calendar-outline"></ion-icon> <span>17 Days</span>
+                                    <ion-icon name="people-outline"></ion-icon> <span>13 Persons</span>
+                                    <ion-icon name="star-outline"></ion-icon> <span>129</span>
+                                </div>
+                                <!-- <div class="travel-button mt-auto">
+                      <a href="details.html" class="btn btn-travel-details px-4">View details</a>
+                    </div> -->
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="details.html" class="card-link">
+                            <div class="card-travel text-center d-flex flex-column"
+                                style="background-image: url('frontend/images/header.jpg');">
+                                <div class="travel-location">Bali</div>
+                                <div class="travel-price">Rp 399.000</div>
+                                <div class="travel-icons">
+                                    <ion-icon name="calendar-outline"></ion-icon> <span>17 Days</span>
+                                    <ion-icon name="people-outline"></ion-icon> <span>13 Persons</span>
+                                    <ion-icon name="star-outline"></ion-icon> <span>129</span>
+                                </div>
+                                <!-- <div class="travel-button mt-auto">
+                      <a href="details.html" class="btn btn-travel-details px-4">View details</a>
+                    </div> -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="details.html" class="card-link">
+                            <div class="card-travel text-center d-flex flex-column"
+                                style="background-image: url('frontend/images/landing.png');">
+                                <div class="travel-location">Bali</div>
+                                <div class="travel-price">Rp 399.000</div>
+                                <div class="travel-icons">
+                                    <ion-icon name="calendar-outline"></ion-icon> <span>17 Days</span>
+                                    <ion-icon name="people-outline"></ion-icon> <span>13 Persons</span>
+                                    <ion-icon name="star-outline"></ion-icon> <span>129</span>
+                                </div>
+                                <!-- <div class="travel-button mt-auto">
+                      <a href="details.html" class="btn btn-travel-details px-4">View details</a>
+                    </div> -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="details.html" class="card-link">
+                            <div class="card-travel text-center d-flex flex-column"
+                                style="background-image: url('frontend/images/header.jpg');">
+                                <div class="travel-location">Bali</div>
+                                <div class="travel-price">Rp 399.000</div>
+                                <div class="travel-icons">
+                                    <ion-icon name="calendar-outline"></ion-icon> <span>17 Days</span>
+                                    <ion-icon name="people-outline"></ion-icon> <span>13 Persons</span>
+                                    <ion-icon name="star-outline"></ion-icon> <span>129</span>
+                                </div>
+                                <!-- <div class="travel-button mt-auto">
+                      <a href="details.html" class="btn btn-travel-details px-4">View details</a>
+                    </div> -->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="section-popular-content" id="popularContent">
             <div class="container">
                 <div class="section-popular-travel row justify-content-center">
                     <div class="col-sm-6 col-md-4 col-lg-3">
@@ -167,7 +312,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Our Network -->
         <section class="section-networks" id="networks">
@@ -188,95 +333,62 @@
             </div>
         </section>
 
-        <!-- Testimonial -->
-        <section class="section-testimonial-heading" id="testimonialHeading">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <h2>They Are Loving Us</h2>
-                        <p>
-                            Moments were giving then
-                            <br>
-                            the best experience
+       
+        <!-- Testimonial Section -->
+        <section class="testimonial-section">
+            <div class="testimonial-content">
+                <div class="testimonial-left">
+                    <h2>What Our Clients Say</h2>
+                    <p>Discover how we have helped our clients achieve their goals.</p>
+                    <div class="buttons">
+                        <button class="btn-primary">Get Started</button>
+                        <button class="btn-secondary">Learn More</button>
+                    </div>
+                </div>
+                <div class="testimonial-right">
+                    <div class="testimonial-card">
+                        <h3>Curug</h3>
+                        <p>"This service has been life-changing! The team is amazing and the support is unparalleled."
                         </p>
+                        <div class="author-info">
+                            <img src="frontend/images/avatar.png" alt="Author Photo"> <!-- Replace with actual image path -->
+                            <div>
+                                <span class="author-name">John Doe</span>
+                                <span class="author-title">CEO, Company XYZ</span>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Add more cards as needed -->
+                    <div class="testimonial-card">
+                        <h3>Candi Prambanan</h3>
+                        <p>"Absolutely fantastic! They went above and beyond to ensure our success."</p>
+                        <div class="author-info">
+                            <img src="frontend/images/member.png" alt="Author Photo"> <!-- Replace with actual image path -->
+                            <div>
+                                <span class="author-name">Jane Smith</span>
+                                <span class="author-title">Marketing Head, ABC Corp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <h3>Jogja</h3>
+                        <p>"Absolutely fantastic! They went above and beyond to ensure our success."</p>
+                        <div class="author-info">
+                            <img src="frontend/images/member.png" alt="Author Photo"> <!-- Replace with actual image path -->
+                            <div>
+                                <span class="author-name">Jane Smith</span>
+                                <span class="author-title">Marketing Head, ABC Corp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more testimonial cards here -->
                 </div>
             </div>
-
         </section>
 
-        <section class="section section-testimonial-content" id="testimonialContent">
-            <div class="container">
-                <div class="section-popular-travel row justify-content-center">
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="card card-testimonial text-center">
-                            <div class="testimonial-content">
-                                <img src="frontend/images/testimonial.png" alt="User" class="mb-4 rounded-circle">
-                                <h3 class="mb-4">S Fauzi</h3>
-                                <p class="testimonial">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Eveniet autem repellat quo mollitia modi.
-                                </p>
-                            </div>
-
-                            <hr>
-                            <p class="trip-to mt-2">
-                                Trip to Curug
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="card card-testimonial text-center">
-                            <div class="testimonial-content">
-                                <img src="frontend/images/testimonial.png" alt="User" class="mb-4 rounded-circle">
-                                <h3 class="mb-4">S Fauzi</h3>
-                                <p class="testimonial">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Eveniet autem repellat quo mollitia modi.
-                                </p>
-                            </div>
-
-                            <hr>
-                            <p class="trip-to mt-2">
-                                Trip to Curug
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="card card-testimonial text-center">
-                            <div class="testimonial-content">
-                                <img src="frontend/images/testimonial.png" alt="User" class="mb-4 rounded-circle">
-                                <h3 class="mb-4">S Fauzi</h3>
-                                <p class="testimonial">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Eveniet autem repellat quo mollitia modi.
-                                </p>
-                            </div>
-
-                            <hr>
-                            <p class="trip-to mt-2">
-                                Trip to Curug
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
-                            I need help
-                        </a>
-                        <a href="#" class="btn btn-get-started px-4 mt-4 mx-1">
-                            Get Started
-                        </a>
-                    </div>
-                </div>
-            </div>
+       
 
 
-        </section>
-
-        
     </main>
 
     <!-- Footer -->
@@ -326,11 +438,17 @@
 
         <div class="container-fluid">
             <div class="row border-top justify-content-center align-items-center pt-4">
-                <div class="col-auto text-gray-500 font-weight-light">2024 Copyright Poling ❤️ All rights reserved</div>
+                <div class="col-auto text-gray-500 font-weight-light">2024 Copyright Poling ❤️ All rights reserved
+                </div>
             </div>
         </div>
     </footer>
 
+
+
+    <script src="frontend/scripts/swiper-bundle.min.jsx"></script>
+    <script src="frontend/scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
     <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
     <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
     <script src="frontend/libraries/retina/retina.min.js"></script>
