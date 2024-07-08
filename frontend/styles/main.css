@@ -1,4 +1,26 @@
 @charset "UTF-8";
+:root {
+  --clr-primary: coral;
+  --clr-danger: #ff7782;
+  --clr-success: #41f1b6;
+  --clr-white: #fff;
+  --clr-info-dark: #363949;
+  --clr-info-light: #dce1eb;
+  --clr-dark: #363949;
+  --clr-warnig: #ff4edc;
+  --clr-light: rgba(132, 139, 200, 0.18);
+  --clr-primary-variant: #111e88;
+  --clr-dark-variant: #677483;
+  --clr-color-background: #f6f6f9;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var( -- clr-light);
+}
+
 body {
   background-color: #FFF;
   font-family: "Poppins", sans-serif;
@@ -84,7 +106,7 @@ body {
 /* Login Button */
 /* Styling dasar untuk tombol login */
 .btn-login {
-  background-color: #f08b21; /* Warna latar belakang tombol */
+  background-color: coral; /* Warna latar belakang tombol */
   color: #fff; /* Warna teks */
   padding: 6px 15px; /* Padding untuk ukuran tombol, ditambahkan lebih besar untuk kapsul */
   border: none; /* Menghapus border default */
@@ -103,7 +125,7 @@ body {
 }
 
 .btn-register {
-  background-color: #f08b21; /* Warna latar belakang tombol */
+  background-color: coral; /* Warna latar belakang tombol */
   color: #fff; /* Warna teks */
   padding: 6px 15px; /* Padding untuk ukuran tombol, ditambahkan lebih besar untuk kapsul */
   border: none; /* Menghapus border default */
@@ -156,7 +178,7 @@ body {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background-color: #f08b21;
+  background-color: coral;
   color: #fff;
 }
 
@@ -284,7 +306,7 @@ header .search-input {
   width: 200px;
 }
 header .btn-search {
-  background-color: #f08b21;
+  background-color: coral;
   color: #FFFFFF;
   padding: 10px 20px;
   border: none;
@@ -407,6 +429,435 @@ header .btn-search:hover {
   font-weight: 500;
 }
 
+.details-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  margin: 20px;
+}
+
+.gallery {
+  flex-grow: 1; /* Galeri memenuhi seluruh ruang yang tersedia di kolom pertama */
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.xzoom-container img {
+  max-width: 95%;
+  border-radius: 20px; /* Sudut melengkung */
+  box-shadow: var(--box-shadow);
+  margin-right: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.xzoom-main {
+  margin-right: auto;
+}
+
+.xzoom-thumbs a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.xzoom-thumbs a img {
+  width: 230px;
+  height: auto;
+  border-radius: 20px; /* Sudut melengkung */
+  box-shadow: var(--box-shadow);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-info {
+  display: grid;
+  gap: 10px;
+  grid-column: 1/span 2;
+}
+
+.category-badge {
+  background-color: #071C4D;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  display: inline-block;
+  max-width: 12%; /* Atur lebar maksimum elemen */
+  margin-right: 20px; /* Beri margin kanan untuk memberi jarak dari elemen lain jika diperlukan */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.title-and-testimonials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.testimonials {
+  background-color: transparent;
+  color: #071C4D;
+  font-weight: 700;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.product-features {
+  display: flex;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 10px; /* Beri ruang antara ikon dan teks */
+}
+
+.feature .icon {
+  margin-right: 5px;
+}
+
+.seller-card {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan soft */
+  background-color: #fff;
+}
+
+.seller-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.seller-info {
+  flex-grow: 1;
+}
+
+.seller-info .seller-name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.seller-info .seller-description {
+  font-size: 12px;
+}
+
+.contact-seller-btn {
+  background-color: coral;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-seller-btn:hover {
+  background-color: rgb(242, 74, 12);
+}
+
+.product-description {
+  margin: 20px;
+}
+
+.product-description h3 {
+  font-size: 18px;
+  margin-top: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-description p {
+  margin-bottom: 20px;
+}
+
+.additional-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 10px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.info-card .icon {
+  margin-right: 10px;
+  font-size: 20px;
+  background-color: coral; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  border-radius: 50%; /* Agar bentuknya lingkaran */
+  width: 30px; /* Ukuran ikon */
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-card .info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-content h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Container utama yang membagi dua kolom: testimonies dan product info */
+.details-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  align-items: flex-start; /* Pastikan elemen saling merujuk ke bagian atas */
+}
+
+/* Container untuk testimonials, dengan overflow scroll */
+.testimonies-card {
+  flex: 1; /* Agar kolom ini fleksibel */
+  max-height: 500px; /* Atur tinggi maksimum untuk testimonials */
+  overflow-y: auto; /* Tambahkan scrollbar jika konten meluap */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih soft */
+}
+
+.testimoni-card {
+  display: flex; /* Menyusun konten dalam baris */
+  align-items: center; /* Menyelaraskan konten di tengah secara vertikal */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 10px; /* Spasi antara testimonial cards */
+}
+
+.testimoni-card small {
+  font-weight: 700;
+}
+
+/* Gaya untuk foto di testimonial card */
+.testimonial-photo {
+  width: 50px; /* Atur ukuran lingkaran */
+  height: 50px;
+  border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+  margin-right: 10px; /* Beri ruang antara foto dan teks */
+  -o-object-fit: cover;
+     object-fit: cover; /* Agar gambar tidak terdistorsi */
+}
+
+/* Heading untuk bagian testimonies */
+.testimonies-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Container untuk informasi produk */
+.card-information {
+  flex: 1; /* Agar kolom ini fleksibel */
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  display: grid;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih soft */
+  max-height: 500px; /* Atur tinggi maksimum untuk card-information */
+  overflow: hidden; /* Sembunyikan konten yang meluap */
+}
+
+/* Styling untuk harga */
+.card-information .price {
+  text-align: left;
+  font-size: 24px;
+}
+
+.card-information .price h3 {
+  font-weight: bold;
+}
+
+.card-information .price span {
+  font-size: small;
+}
+
+/* Styling untuk details dengan layout grid */
+.card-information .details {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Dua kolom: auto untuk judul, 1fr untuk teks */
+  -moz-column-gap: 10px;
+       column-gap: 10px; /* Jarak antara kolom */
+  row-gap: 15px; /* Jarak antara baris */
+}
+
+.card-information .details h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0; /* Hilangkan margin default */
+  text-align: left; /* Judul sejajar kanan untuk alignment yang lebih baik */
+}
+
+.card-information .details p {
+  margin: 0; /* Hilangkan margin default */
+  font-weight: 650;
+  text-align: right; /* Teks sejajar kiri */
+}
+
+/* Styling untuk tombol */
+.purchase-btn {
+  width: 100%;
+  background-color: coral;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.purchase-btn:hover {
+  background-color: rgb(242, 74, 12);
+}
+
+/* Responsive styling untuk perangkat dengan lebar kurang dari 768px (mobile) */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Menghilangkan kemampuan scroll horizontal */
+  }
+  .details-container {
+    flex-direction: column; /* Susun vertikal */
+  }
+  .product-info {
+    order: -1; /* Tempatkan di atas pada perangkat mobile */
+  }
+  .category-badge {
+    max-width: 70px; /* Ukuran lebih kecil untuk mobile */
+    font-size: 10px; /* Ukuran font lebih kecil */
+    padding: 6px; /* Padding lebih kecil */
+  }
+  .title-and-testimonials {
+    flex-direction: column; /* Menyusun konten dalam satu kolom */
+    align-items: flex-start; /* Rata kiri semua konten */
+  }
+  .testimonials {
+    margin-top: 10px; /* Beri jarak antara title dengan testimonials */
+  }
+  .product-features {
+    flex-direction: column; /* Menyusun konten dalam satu kolom */
+  }
+  .feature {
+    margin-bottom: 10px; /* Beri ruang antara setiap fitur */
+  }
+  .xzoom-container img {
+    width: 650px !important;
+    justify-content: center !important;
+    height: 200px !important;
+    max-width: 100%; /* Batasan lebar maksimum jika diperlukan */
+  }
+  .xzoom-thumbs {
+    display: none;
+  }
+  .seller-card {
+    flex-direction: column; /* Mengatur agar konten stack vertikal */
+    align-items: flex-start; /* Menyusun konten dari kiri ke kanan */
+    padding: 10px; /* Padding yang lebih kecil */
+    max-width: 290px; /* Lebar maksimum sesuai dengan lebar layar */
+  }
+  .seller-image {
+    width: 40px; /* Ukuran gambar seller lebih kecil */
+    height: 40px;
+  }
+  .seller-info {
+    flex-grow: 1;
+    margin-top: 10px; /* Memberi margin atas */
+  }
+  .seller-info .seller-name {
+    font-size: 14px; /* Ukuran nama penjual lebih kecil */
+  }
+  .seller-info .seller-description {
+    font-size: 12px; /* Ukuran deskripsi penjual lebih kecil */
+  }
+  .contact-seller-btn {
+    padding: 8px; /* Ukuran tombol lebih kecil */
+    font-size: 10px; /* Ukuran teks tombol lebih kecil */
+  }
+}
+/* Responsive untuk perangkat dengan lebar antara 769px hingga 1024px (tablet) */
+@media (max-width: 1024px) {
+  .details-container {
+    flex-direction: column; /* Susun vertikal */
+  }
+  .product-info {
+    order: 1; /* Tempatkan di atas pada perangkat tablet */
+  }
+  .gallery {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .category-badge {
+    max-width: 70px; /* Ukuran lebih kecil untuk mobile */
+    font-size: 10px; /* Ukuran font lebih kecil */
+    padding: 6px; /* Padding lebih kecil */
+  }
+  .xzoom-container img {
+    width: 600px !important;
+    height: auto !important;
+    max-width: 100%; /* Batasan lebar maksimum jika diperlukan */
+  }
+  .xzoom-thumbs img {
+    width: 90% !important; /* Batasan lebar maksimum jika diperlukan */
+    height: 120px !important;
+  }
+}
+/* Responsive untuk perangkat dengan lebar lebih dari 1024px (desktop) */
+@media (min-width: 1025px) {
+  .details-container {
+    flex-direction: row; /* Susun horizontal */
+  }
+  .product-info {
+    grid-column: 1/span 2;
+  }
+  .gallery {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .xzoom-container img {
+    max-width: 95%;
+    margin-right: 100px;
+  }
+  .xzoom-thumbs a img {
+    width: 230px;
+  }
+}
 .section-popular-content .section-popular-travel .card-travel {
   min-height: 380px;
   background-color: #ddd; /* Fallback color */
@@ -705,6 +1156,7 @@ header .btn-search:hover {
 .section-details-content .breadcrumb {
   background-color: transparent;
   padding: 0;
+  padding-left: 30px;
   margin-bottom: 30px;
 }
 .section-details-content .breadcrumb-item.active {
@@ -821,18 +1273,6 @@ header .btn-search:hover {
   height: 45px;
   float: left;
 }
-.section-details-content .gallery .xzoom-container {
-  display: block;
-}
-.section-details-content .gallery .xzoom-container .xzoom {
-  width: 100%;
-  box-shadow: none;
-  margin-bottom: 10px;
-}
-.section-details-content .gallery .xzoom-container .xactive {
-  border: 4px solid #1abc9c;
-  box-shadow: none;
-}
 .section-details-content .member .member-image {
   width: 40px;
   height: 40px;
@@ -917,7 +1357,7 @@ header .btn-search:hover {
   flex-direction: column;
 }
 
-.custom-card .product-info {
+.custom-card .product__info {
   display: flex;
   align-items: flex-start;
 }

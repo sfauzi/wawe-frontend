@@ -159,7 +159,6 @@ body {
     width: 100vw;
     height: 100vh;
     font-size: 0.88rem;
-    user-select: none;
     overflow-x: hidden;
     background: var(--clr-color-background);
 }
@@ -755,6 +754,16 @@ main .settings .edit-profile-button {
     box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
 
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #f0f0f0; /* Gray background */
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    resize: vertical; /* Allows vertical resizing only */
+  }
+
 /* Ensures consistent padding and border inclusion in width */
 .form-group input:focus {
     border-color: coral; /* Highlight border on focus */
@@ -1094,7 +1103,29 @@ main .settings .edit-profile-button {
 }
 // ** END SUCCESS BOOK ** //
 
+/* CSS for dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 15%;
+    border-radius: 5px;
+    left: 73%;
+}
 
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
 
 
 
@@ -1521,6 +1552,30 @@ main .settings .edit-profile-button {
         width: 100%; /* Full width on mobile */
     }
 
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        text-align: left;
+        top: 22%;
+        border-radius: 5px;
+        left: 50%;
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
    
 }
 
@@ -1637,6 +1692,30 @@ main .settings .edit-profile-button {
         font-size: 1.5rem;
         color: #333; /* Warna ikon close */
         
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        text-align: left;
+        top: 10%;
+        border-radius: 5px;
+        left: 75%;
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
     }
 }
 
