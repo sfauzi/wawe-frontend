@@ -60,11 +60,11 @@
                 <a href="login.html" class="btn btn-login ml-auto d-lg-none">Login</a>
 
                 <!-- Profil untuk mobile di dalam collapse -->
-            <div class="navbar-profile-mobile d-lg-none mt-3 text-center">
-                <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo">
-                <span class="profile-name ml-2">John Doe</span>
-            </div>
-                
+                <div class="navbar-profile-mobile d-lg-none mt-3 text-center">
+                    <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo">
+                    <span class="profile-name ml-2">John Doe</span>
+                </div>
+
             </div>
             <!-- Tambahkan elemen profil di sini -->
             <div class="navbar-profile d-none d-lg-flex align-items-center ml-auto">
@@ -76,14 +76,14 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <!-- Konten dropdown -->
-                        <a class="dropdown-item" href="dashboard.html">Dashboard</a>
-                        <a class="dropdown-item" href="#">Pengaturan</a>
+                        <a class="dropdown-item" href="dashboard.html">My Ticket</a>
+                        <a class="dropdown-item" href="#">Settings</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Keluar</a>
+                        <a class="dropdown-item" href="login.html">Logout</a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- <a href="register.html" class="btn btn-register d-none d-lg-inline-block ml-lg-3">Register</a> -->
             <!-- <a href="login.html" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</a> -->
         </nav>
@@ -122,28 +122,41 @@
             <section class="section-stats" id="stats">
                 <div class="stats-card">
                     <div class="stats-item">
-                        <i class="fa fa-users"></i>
+                        <!-- <i class="fa fa-users"></i> -->
+                        <div class="stats-icon">
+                            <img src="frontend/images/icons/profile-2user.png" alt="Members Icon"
+                                class="icons-stats">
+                        </div>
                         <div class="stats-content">
                             <h2>20K</h2>
                             <p>Members</p>
                         </div>
                     </div>
                     <div class="stats-item border-left">
-                        <i class="fa fa-globe"></i>
+                        <!-- <i class="fa fa-globe"></i> -->
+                        <div class="stats-icon">
+                            <img src="frontend/images/icons/sun-fog.png" alt="Members Icon" class="icons-stats">
+                        </div>
                         <div class="stats-content">
                             <h2>13</h2>
                             <p>Countries</p>
                         </div>
                     </div>
                     <div class="stats-item border-left">
-                        <i class="fa fa-hotel"></i>
+                        <!-- <i class="fa fa-hotel"></i> -->
+                        <div class="stats-icon">
+                            <img src="frontend/images/icons/global.png" alt="Members Icon" class="icons-stats">
+                        </div>
                         <div class="stats-content">
                             <h2>3K</h2>
                             <p>Hotel</p>
                         </div>
                     </div>
                     <div class="stats-item border-left">
-                        <i class="material-icons">handshake</i>
+                        <!-- <i class="material-icons">handshake</i> -->
+                        <div class="stats-icon">
+                            <img src="frontend/images/icons/heart-tick.png" alt="Members Icon" class="icons-stats">
+                        </div>
                         <div class="stats-content">
                             <h2>72</h2>
                             <p>Partners</p>
@@ -333,7 +346,7 @@
             </div>
         </section>
 
-       
+
         <!-- Testimonial Section -->
         <section class="testimonial-section">
             <div class="testimonial-content">
@@ -351,7 +364,8 @@
                         <p>"This service has been life-changing! The team is amazing and the support is unparalleled."
                         </p>
                         <div class="author-info">
-                            <img src="frontend/images/avatar.png" alt="Author Photo"> <!-- Replace with actual image path -->
+                            <img src="frontend/images/avatar.png" alt="Author Photo">
+                            <!-- Replace with actual image path -->
                             <div>
                                 <span class="author-name">John Doe</span>
                                 <span class="author-title">CEO, Company XYZ</span>
@@ -363,7 +377,8 @@
                         <h3>Candi Prambanan</h3>
                         <p>"Absolutely fantastic! They went above and beyond to ensure our success."</p>
                         <div class="author-info">
-                            <img src="frontend/images/member.png" alt="Author Photo"> <!-- Replace with actual image path -->
+                            <img src="frontend/images/member.png" alt="Author Photo">
+                            <!-- Replace with actual image path -->
                             <div>
                                 <span class="author-name">Jane Smith</span>
                                 <span class="author-title">Marketing Head, ABC Corp</span>
@@ -374,7 +389,8 @@
                         <h3>Jogja</h3>
                         <p>"Absolutely fantastic! They went above and beyond to ensure our success."</p>
                         <div class="author-info">
-                            <img src="frontend/images/member.png" alt="Author Photo"> <!-- Replace with actual image path -->
+                            <img src="frontend/images/member.png" alt="Author Photo">
+                            <!-- Replace with actual image path -->
                             <div>
                                 <span class="author-name">Jane Smith</span>
                                 <span class="author-title">Marketing Head, ABC Corp</span>
@@ -386,13 +402,74 @@
             </div>
         </section>
 
-       
-
-
     </main>
 
     <!-- Footer -->
-    <footer class="section-footer mt-5 mb-4 border-top">
+
+    <footer>
+        <div class="container container-footer">
+            <div class="row row-footer">
+                <div class="col col-footer" id="company">
+                    <img src="frontend/images/logo.png" alt="" class="logo-footer">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ullam.</p>
+                    <div class="social">
+                        <!-- <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a> -->
+                        <a href="#"><img src="frontend/images/icons/facebook.png" alt="Facebook Icon"
+                                class="social-icon"></a>
+                        <a href="#"><img src="frontend/images/icons/instagram.png" alt="Instagram Icon"
+                                class="social-icon"></a>
+                        <a href="#"><img src="frontend/images/icons/whatsapp.png" alt="WhatsApp Icon"
+                                class="social-icon"></a>
+                    </div>
+                </div>
+                <div class="col col-footer" id="services">
+                    <h3>Services</h3>
+                    <div class="links">
+                        <a href="#">Ilustration</a>
+                        <a href="#">Ilustration</a>
+                        <a href="#">Ilustration</a>
+                        <a href="#">Ilustration</a>
+                    </div>
+                </div>
+                <div class="col col-footer" id="useful-link">
+                    <h3>Links</h3>
+                    <div class="links">
+                        <a href="#">About</a>
+                        <a href="#">About</a>
+                        <a href="#">About</a>
+                        <a href="#">About</a>
+                    </div>
+                </div>
+
+                <div class="col col-footer" id="contact">
+                    <h3>Contact</h3>
+                    <div class="contact-details-footer">
+                        <!-- <ion-icon name="location-outline"></ion-icon> -->
+                         <img src="frontend/images/icons/location.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="contact-details-footer">
+                        <!-- <ion-icon name="call-outline"></ion-icon> -->
+                         <img src="frontend/images/icons/call.png" alt="">
+                        <p>+62 123 456 7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row border-top justify-content-center align-items-center pt-4">
+                <div class="col-auto text-gray-500 font-weight-light">2024 Copyright Poling ❤️ All rights reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- <footer class="section-footer mt-5 mb-4 border-top">
         <div class="container pt-5 pb-5">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -442,7 +519,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 
 

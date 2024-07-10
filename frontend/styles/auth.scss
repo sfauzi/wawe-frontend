@@ -81,6 +81,7 @@ body, html {
 .title h1 {
     font-size: 24px;
     font-weight: bold;
+    color: #071C4D;
     margin-bottom: 10px;
 }
 
@@ -101,6 +102,11 @@ body, html {
     top: 50%;
     transform: translateY(-50%);
     color: #999;
+}
+
+.input-icon img{
+    width: 20px;  /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
 }
 
 .input-icon i {
@@ -145,6 +151,10 @@ input[type="password"]:focus {
 .remember-me label {
     vertical-align: middle;
     margin-right: 5px;
+    color: #071C4D;
+    font-size: 14px;
+    font-weight: 600;
+
 }
 
 

@@ -141,8 +141,6 @@ nav {
     margin-bottom: 1.5rem; /* Menyediakan ruang di bawah navbar */
   }
 
-  
-
 
 * {
     margin: 0;
@@ -280,6 +278,8 @@ aside .sidebar {
     border-radius: 13px;
 }
 
+
+
 aside h3{
     font-weight: 500;
 }
@@ -291,6 +291,12 @@ aside .sidebar a {
     gap: 1rem;
     align-items: center;
     height: 3.2rem;
+    transition: all .1s ease-in;
+}
+
+.sidebar a .icon-sidebar {
+    width: 24px;
+    height: 24px;
     transition: all .1s ease-in;
 }
 
@@ -321,6 +327,11 @@ aside .sidebar a.active:before{
 
 aside .sidebar a:hover {
     color: var(--clr-primary);
+}
+
+aside .sidebar a:hover .icon-sidebar {
+    margin-left: 1rem;
+    transition: .4s ease;
 }
 
 aside .sidebar a:hover span {
@@ -381,6 +392,26 @@ main .insights>div {
 
 main .insights > div:hover {
     box-shadow: none;
+}
+
+main .stats-icon {
+    margin-right: 10px; /* Add space between icon and title */
+    display: inline-block; /* Make icon an inline block */
+    width: 50px; /* Fixed width for the icon circle */
+    height: 50px; /* Fixed height for the icon circle */
+    border-radius: 50%; /* Perfect circle for the icon */
+    background-color: coral; /* Background color for the icon */
+    position: relative; /* Set relative position for absolute positioning of the image */
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+main .stats-icon .icons-stats {
+    width: 60%; /* Adjust the width of the image as needed */
+    height: 60%; /* Adjust the height of the image as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image inside the circle */
 }
 
 main .insights > div span {
@@ -1206,10 +1237,15 @@ main .settings .edit-profile-button {
         border-bottom-right-radius: 20px;
     }
 
+   
+   .search-container .search-icon {
+        width: 7px !important;
+        height: 7px !important;
+    }
+    
     .search-container .search-btn .material-icons {
         font-size: 1.5rem; /* Ukuran ikon search */
         color: #333;
-
     }
 
     .user {

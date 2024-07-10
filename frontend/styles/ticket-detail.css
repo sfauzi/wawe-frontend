@@ -86,7 +86,12 @@ body {
 .icon {
   font-size: 24px; /* Sesuaikan ukuran ikon */
   color: #333; /* Sesuaikan warna ikon */
-  margin-right: 10px; /* Jarak antara ikon dan teks keterangan */
+  margin-right: 5px; /* Jarak antara ikon dan teks keterangan */
+}
+
+.icon .icon-img-succes {
+  width: 24px;
+  height: 24px;
 }
 
 .icon-description {
@@ -97,7 +102,7 @@ body {
   font-size: 14px; /* Sesuaikan ukuran teks keterangan */
   margin: 0;
   font-weight: 700;
-  padding-left: 10px; /* Jarak antara ikon dan teks keterangan */
+  padding-left: 3px; /* Jarak antara ikon dan teks keterangan */
 }
 
 .custom-card .divider {

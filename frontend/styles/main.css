@@ -332,7 +332,7 @@ header .btn-search:hover {
   flex-wrap: nowrap; /* Hindari pembungkusan item ke baris baru */
   width: 100%; /* Kartu memanjangi seluruh lebar */
   background-color: #fff;
-  border-radius: 10px; /* Tambahkan sudut melengkung */
+  border-radius: 20px; /* Tambahkan sudut melengkung */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden; /* Sembunyikan konten yang melimpah */
   margin: 0 10px; /* Tambahkan margin untuk menghindari potongan di tepi */
@@ -354,6 +354,26 @@ header .btn-search:hover {
   border-bottom: none; /* Hapus garis pemisah untuk item terakhir */
 }
 
+.stats-item .stats-icon {
+  margin-right: 10px; /* Add space between icon and title */
+  display: inline-block; /* Make icon an inline block */
+  width: 40px; /* Fixed width for the icon circle */
+  height: 40px; /* Fixed height for the icon circle */
+  border-radius: 50%; /* Perfect circle for the icon */
+  background-color: coral; /* Background color for the icon */
+  position: relative; /* Set relative position for absolute positioning of the image */
+  overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.stats-item .icons-stats {
+  width: 60%; /* Adjust the width of the image as needed */
+  height: 60%; /* Adjust the height of the image as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image inside the circle */
+}
+
 .stats-item i {
   font-size: 24px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
   margin-right: 10px; /* Tambahkan ruang antara ikon dan judul */
@@ -363,7 +383,7 @@ header .btn-search:hover {
   text-align: center; /* Pusatkan ikon di dalam lingkaran */
   line-height: 40px; /* Pastikan ikon berada di tengah secara vertikal */
   border-radius: 50%; /* Buat lingkaran sempurna untuk ikon */
-  background-color: #ff7f00; /* Warna latar belakang orange untuk ikon */
+  background-color: coral; /* Warna latar belakang orange untuk ikon */
   color: #fff; /* Warna teks putih untuk kontras */
 }
 
@@ -376,7 +396,7 @@ header .btn-search:hover {
 
 .stats-item h2 {
   font-size: 24px; /* Sesuaikan ukuran judul untuk layar yang lebih kecil */
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 5px; /* Tambahkan ruang antara judul dan teks */
 }
 
@@ -530,6 +550,8 @@ header .btn-search:hover {
 
 .feature .icon {
   margin-right: 5px;
+  width: 24px;
+  height: 24px;
 }
 
 .seller-card {
@@ -606,17 +628,21 @@ header .btn-search:hover {
   background-color: #fff;
 }
 
-.info-card .icon {
+.info-card .icons-details {
   margin-right: 10px;
-  font-size: 20px;
-  background-color: coral; /* Warna latar belakang */
-  color: white; /* Warna teks */
-  border-radius: 50%; /* Agar bentuknya lingkaran */
-  width: 30px; /* Ukuran ikon */
+  background-color: coral; /* Background color */
+  border-radius: 50%; /* Circular shape */
+  width: 30px; /* Size of the circular background */
   height: 30px;
-  display: flex;
+  display: flex; /* Center content horizontally and vertically */
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Ensure the image does not overflow the container */
+}
+
+.info-card .icons-details .icon-detail-img {
+  width: 70%; /* Adjust the width as needed */
+  height: 70%; /* Adjust the height as needed */
 }
 
 .info-card .info-content {
@@ -864,7 +890,7 @@ header .btn-search:hover {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 70%); /* Gradient from bottom to top */
   background-size: cover;
   margin-bottom: 20px;
-  border-radius: 10px; /* Rounded corners for cards */
+  border-radius: 25px; /* Rounded corners for cards */
   position: relative; /* Needed for icon positioning */
   padding: 20px; /* Adjust padding if needed */
   color: #fff; /* Text color for content over the image */
@@ -1142,6 +1168,162 @@ header .btn-search:hover {
   color: #071C4D;
 }
 
+footer {
+  background-color: white;
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  padding: 3rem 1rem;
+}
+
+.container .container-footer {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .container {
+  margin-top: 100px;
+}
+
+.row .row-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col .col-footer {
+  flex: 1; /* Let the columns grow to fit the available space */
+  margin: 10px; /* Add space around each column */
+  min-width: 200px; /* Ensure columns don't get too narrow */
+}
+
+.col-footer .logo-footer {
+  width: 100px;
+  margin-bottom: 25px;
+}
+
+.col-footer h3 {
+  color: #071C4D;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.col-footer h3::after {
+  content: "";
+  height: 3px;
+  width: 0px;
+  background-color: coral;
+  position: absolute;
+  bottom: 150px;
+  left: 16px;
+  transition: 0.3s ease;
+}
+
+.col-footer h3:hover::after {
+  width: 30px;
+}
+
+.col-footer .social a .social-icon {
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.col-footer .social a {
+  color: #071C4D;
+  margin-top: 2rem;
+  margin-right: 5px;
+  transition: 0.3s ease;
+}
+
+.col-footer .social a:hover {
+  transform: scale(1.5);
+  filter: grayscale(25);
+  opacity: 0.8; /* Slightly reduce opacity */
+}
+
+.col-footer .links a {
+  display: block;
+  text-decoration: none;
+  color: #071C4D;
+  margin-bottom: 5px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.col-footer .links a:before {
+  content: "";
+  height: 16px;
+  width: 3px;
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  background-color: #071C4D;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.col-footer .links a:hover:before {
+  opacity: 1;
+}
+
+.col-footer .links a:hover {
+  transform: translateX(-8px);
+  color: #071C4D;
+}
+
+.col-footer .contact-details-footer {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.contact-details-footer img {
+  margin-right: 10px; /* Adjust as needed for spacing between icon and text */
+  width: 22px;
+  height: 22px;
+}
+
+.contact-details-footer ion-icon {
+  margin-right: 10px; /* Adjust as needed for spacing between icon and text */
+  width: 22px;
+  height: 22px;
+}
+
+footer .container-fluid {
+  width: 100%;
+  margin-top: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .row-footer {
+    flex-direction: column;
+  }
+  .col-footer {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  .col-footer h3::after {
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: coral;
+    position: absolute;
+    bottom: 130px;
+    left: 16px;
+    transition: 0.3s ease;
+  }
+}
 .section-details-header {
   min-height: 310px;
   background: #E4E6EB;
@@ -1417,7 +1599,12 @@ header .btn-search:hover {
 .icon {
   font-size: 24px; /* Sesuaikan ukuran ikon */
   color: #333; /* Sesuaikan warna ikon */
-  margin-right: 10px; /* Jarak antara ikon dan teks keterangan */
+  margin-right: 5px; /* Jarak antara ikon dan teks keterangan */
+}
+
+.icon .icon-img-succes {
+  width: 24px;
+  height: 24px;
 }
 
 .icon-description {
@@ -1428,7 +1615,7 @@ header .btn-search:hover {
   font-size: 14px; /* Sesuaikan ukuran teks keterangan */
   margin: 0;
   font-weight: 700;
-  padding-left: 10px; /* Jarak antara ikon dan teks keterangan */
+  padding-left: 3%; /* Jarak antara ikon dan teks keterangan */
 }
 
 .custom-card .divider {
