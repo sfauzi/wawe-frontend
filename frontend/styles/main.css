@@ -958,6 +958,212 @@ header .btn-search:hover {
   color: #fff;
 }
 
+.faq-section {
+  background-color: #f6f8fd; /* Background color of the FAQ section */
+  padding: 50px 20px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.faq-description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* FAQ Card Styles */
+.faq-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.faq-icon {
+  font-size: 1.5em;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  text-align: left;
+}
+
+.faq-card.active .faq-answer {
+  max-height: 500px; /* Adjust this value based on the content length */
+  padding-top: 10px;
+}
+
+.faq-card.active .faq-icon {
+  transform: rotate(45deg); /* Rotating the icon to indicate it's open */
+}
+
+.my-service-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px; /* Increased padding */
+}
+
+.my-service-container {
+  max-width: 1000px; /* Increased maximum width */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-service-content {
+  flex: 1;
+  padding-right: 40px; /* Increased right padding */
+}
+
+.my-service-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.my-service-description {
+  font-size: 1.2em;
+  margin-bottom: 25px; /* Adjusted margin */
+}
+
+.my-service-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.my-service-list p {
+  font-weight: 500;
+}
+
+.my-service-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.my-service-icon {
+  background-color: rgba(30, 186, 83, 0.4);
+  color: #fff;
+  opacity: 40%;
+  padding: 10px; /* Adjusted padding */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-right: 15px; /* Adjusted margin */
+}
+
+.my-service-icon i {
+  font-size: 1rem; /* Decreased font size for smaller icons */
+  color: #1EBA53;
+  font-weight: bold;
+}
+
+.my-service-image {
+  flex: 1;
+  max-width: 400px; /* Adjusted maximum width for the image */
+}
+
+.my-service-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px; /* Adjusted border radius */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
+}
+
+.get-started-button {
+  background-color: coral;
+  color: #fff;
+  border: none;
+  font-weight: 700px;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 30px; /* Rounded border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: rgb(242, 74, 12); /* Darker shade on hover */
+}
+
+/* Media queries for tablets (landscape) and smaller */
+@media (max-width: 1024px) {
+  .my-service-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .my-service-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  .my-service-icon {
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  .my-service-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  .my-service-description {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+}
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .my-service-section {
+    padding: 60px 20px; /* Adjusted padding for smaller screens */
+  }
+  .my-service-title {
+    font-size: 1.5em;
+  }
+  .my-service-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  .my-service-icon {
+    width: 18px;
+    height: 18px;
+    padding: 6px;
+    margin-right: 8px;
+  }
+  .my-service-list li {
+    margin-bottom: 10px;
+  }
+}
 .section-networks {
   margin-top: -170px;
   background-color: #fff;
@@ -1169,7 +1375,7 @@ header .btn-search:hover {
 }
 
 footer {
-  background-color: white;
+  background-color: #f6f8fd;
   position: relative;
   width: 100%;
   min-height: 350px;
@@ -1305,6 +1511,9 @@ footer .container-fluid {
 }
 
 @media (max-width: 900px) {
+  footer .container {
+    margin-top: -20px;
+  }
   .row-footer {
     flex-direction: column;
   }
@@ -1430,8 +1639,6 @@ footer .container-fluid {
   color: #FFF;
 }
 .section-details-content .card-right {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   border-bottom: 0;
 }
 .section-details-content .features {
@@ -1463,9 +1670,10 @@ footer .container-fluid {
   margin-top: -16px;
 }
 .section-details-content .btn-join-now {
-  background-color: #FF9E53;
+  background-color: coral;
   color: #FFF;
-  border-radius: 0;
+  border-radius: 20px;
+  font-weight: 700;
 }
 .section-details-content .btn-join-now:hover {
   background-color: #FFB57C;

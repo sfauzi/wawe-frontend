@@ -47,7 +47,6 @@ nav {
   background: none;
   flex: 1;
   padding: 0.5rem;
-  font-family: 'Poppins', sans-serif;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -251,7 +250,7 @@ aside .sidebar {
   height: 85vh;
   position: relative;
   top: 1rem;
-  border-radius: 15px;
+  border-radius: 13px;
 }
 
 aside h3 {
@@ -638,10 +637,6 @@ main .settings .edit-profile-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.edit-profile-form input, textarea {
-  font-family: 'Poppins', sans-serif;
 }
 
 .content {
@@ -1399,8 +1394,6 @@ main .settings .edit-profile-button {
   }
   .info-card {
     width: 100%; /* Full width on mobile */
-    position: relative;
-    margin-top: -20px;
   }
   .dropdown-content {
     display: none;

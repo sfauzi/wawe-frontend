@@ -29,3 +29,22 @@ prevScrollpos = currentScrollPos;
 }
 
 
+// SECTION FAQ
+document.addEventListener('DOMContentLoaded', function() {
+    var faqCards = document.querySelectorAll('.faq-card');
+  
+    faqCards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        var answer = this.querySelector('.faq-answer');
+        
+        if (this.classList.contains('active')) {
+          this.classList.remove('active');
+          answer.style.maxHeight = null;
+        } else {
+          this.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+  
