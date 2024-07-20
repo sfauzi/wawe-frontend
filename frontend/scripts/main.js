@@ -48,3 +48,10 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 })
+
+
+// TOMBOL FILTER CATALOG DI MOBILE
+function toggleMobileMenu() {
+  const mobileMenu = document.querySelector('.mobile-menu');
+  mobileMenu.classList.toggle('active');
+}
