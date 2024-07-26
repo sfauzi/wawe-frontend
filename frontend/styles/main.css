@@ -2557,6 +2557,7 @@ footer .container-fluid {
 
 .catalog-cards {
   display: flex;
+  grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;
   gap: 20px;
 }

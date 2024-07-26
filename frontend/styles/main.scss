@@ -2969,7 +2969,7 @@ footer {
 
 // ** END SUCCESS BOOK ** //
 
-// CATALOG
+// ** CATALOG ** //
 
 .catalogue {
     padding: 50px;
@@ -3094,6 +3094,7 @@ footer {
 
 .catalog-cards {
     display: flex;
+    grid-template-columns: repeat(4, 1fr);
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -3333,3 +3334,5 @@ footer {
         display: none; /* Ensure mobile menu is hidden on desktop */
     }
 }
+
+// ** END CATALOG ** //
