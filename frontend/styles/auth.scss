@@ -186,6 +186,163 @@ input[type="password"]:focus {
     opacity: 0.8;
 }
 
+
+// EMAIL VERIFICATION
+.question-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Agar section penuh tinggi viewport */
+    padding: 20px;
+    /* Menambahkan padding di dalam section */
+}
+
+.question-card {
+    position: relative;
+    /* Agar gambar overlay dapat diposisikan dengan absolute relatif terhadap kartu */
+    background: url('../images/bg-verify.svg') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    height: 400px;
+    width: 1000px;
+    color: #fff;
+    /* Mengatur warna teks menjadi putih agar kontras dengan background */
+    margin: 20px;
+    /* Menambahkan ruang di luar kartu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Mengatur konten di tengah secara vertikal */
+    align-items: flex-end;
+    /* Mengatur konten di rata kiri secara horizontal */
+}
+
+.overlay-image {
+    position: absolute;
+    top: -40px;
+    /* Menempatkan gambar di atas batas atas kartu */
+    left: 0;
+    /* Menempatkan gambar di sisi kanan kartu */
+    width: 350px;
+    /* Ukuran gambar */
+    height: auto;
+    /* Mempertahankan rasio aspek gambar */
+    z-index: 1;
+    /* Menjaga gambar di atas kartu */
+}
+
+.question-content {
+    text-align: right;
+    /* Teks dalam konten diatur rata kiri */
+    z-index: 2;
+    /* Menjaga konten di atas gambar */
+    position: relative;
+    /* Agar z-index dapat diterapkan */
+}
+
+.question-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.question-content h5 {
+    font-weight: 600;
+}
+
+.question-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.question-content .btn {
+    display: inline-block;
+    background-color: coral;
+    /* Warna latar belakang tombol dengan transparansi */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.question-content .btn:hover {
+    background-color: rgb(242, 74, 12);
+    /* Mengatur warna latar belakang tombol saat hover */
+}
+
+
+// /* Styling for the page container */
+// .verification-container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     background-color: #f0f0f5;
+//     text-align: center;
+//   }
+
+//   /* Styling for the email verification card */
+//   .verification-card {
+//     background-color: white;
+//     padding: 30px;
+//     border-radius: 10px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     width: 100%;
+//     max-width: 400px;
+//   }
+
+//   /* Title styling */
+//   .verification-card h1 {
+//     margin-top: 0;
+//     font-size: 24px;
+//     color: #333;
+//   }
+
+//   /* Text content styling */
+//   .verification-card p {
+//     font-size: 16px;
+//     color: #666;
+//     margin: 20px 0;
+//   }
+
+//   /* Button styling */
+//   .verification-card .btn {
+//     background-color: #5a67d8;
+//     color: white;
+//     padding: 12px 20px;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     font-size: 16px;
+//     text-decoration: none;
+//   }
+
+//   .verification-card .btn:hover {
+//     background-color: #434190;
+//   }
+
+//   /* Footer link styling */
+//   .footer-link {
+//     margin-top: 20px;
+//     font-size: 14px;
+//     color: #5a67d8;
+//   }
+
+//   .footer-link a {
+//     color: #5a67d8;
+//     text-decoration: none;
+//   }
+
+//   .footer-link a:hover {
+//     text-decoration: underline;
+//   }
+
 /* Styles for tablets and larger smartphones (widths up to 1024px) */
 @media (max-width: 1024px) {
     .login-container {
@@ -243,6 +400,30 @@ input[type="password"]:focus {
         font-size: 14px; /* Adjust button font size */
         padding: 10px; /* Reduce button padding */
     }
+
+    .overlay-image {
+        display: none;
+        // z-index: 0;
+        // opacity: 20%;
+        // top: 25px;
+        // width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar kartu */
+        // height: auto; /* Menjaga rasio aspek gambar */
+        // left: 0; /* Gambar akan tetap berada di tengah kartu */
+    }
+
+    .question-card {
+        align-items: center;
+        background: url('../images/bg-verify.svg');
+        width: 100%; /* Kartu akan menggunakan seluruh lebar viewport */
+        padding: 20px; /* Menyesuaikan padding kartu */
+        background-color: rgba(0, 0, 0, 0.5); /* Menambahkan warna semi-transparan di belakang gambar */
+    }
+
+    .question-content {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
 }
 
 /* Styles for smaller smartphones (widths up to 480px) */
