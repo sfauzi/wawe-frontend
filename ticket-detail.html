@@ -1,114 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="frontend/styles/ticket-detail.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="frontend/styles/ticket-detail.css">
+    </head>
 
-
-
-
-</head>
-
-<body>
-    <div class="container">
-
-
-
-
-
-
+    <body>
         <!-- main section start -->
         <main>
+            <div class="container">
+                <div class="title-section">
+                    <h1>Your Tickets</h1>
+                    <p>Unduh tiket Anda di sini untuk ditukarkan dengan tiket fisik saat acara berlangsung.</p>
+                </div>
 
-            <div class="card-container">
-                <div class="custom-card">
-                    <div class="card-content">
-                        <div class="product-info">
-                            <div class="product-image">
-                                <img src="frontend/images/landing.png" alt="Product Image">
-                            </div>
-                            <div class="product-details">
-                                <h2 class="product-title">Nama Produk</h2>
-                                <div class="product-status">
-                                    <p>SUCCESS</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="icon-container">
-                            <span class="icon">
-                                <!-- <ion-icon name="calendar-outline"></ion-icon> -->
-                                 <img src="frontend/images/icons/calendar.png" alt="Check Icon" class="icon-img-succes">
-                                <!-- Ganti dengan ikon Font Awesome yang sesuai -->
-                            </span>
-                            <div class="icon-description">
-                                <p>15-6-2024</p>
-                            </div>
-                            <span class="icon">
-                                <!-- <ion-icon name="people-outline">Ganti dengan ikon Font Awesome yang sesuai -->
-                                    <img src="frontend/images/icons/people.png" alt="Check Icon" class="icon-img-succes">
-                            </span>
-                            <div class="icon-description">
-                                <p>1 person</p>
-                            </div>
-                            <span class="icon">
-                                <!-- <ion-icon name="pricetag-outline"></ion-icon>Ganti dengan ikon Font Awesome yang sesuai -->
-                                <img src="frontend/images/icons/tag.png" alt="Check Icon" class="icon-img-succes">
-                            </span>
-                            <div class="icon-description">
-                                <p>Open Trip</p>
-                            </div>
-                            <span class="icon">
-                                <!-- <ion-icon name="cash-outline"></ion-icon> -->
-                                <!-- Ganti dengan ikon Font Awesome yang sesuai -->
-    
-                                <img src="frontend/images/icons/dollar-circle.png" alt="Check Icon" class="icon-img-succes">
-                            </span>
-                            <div class="icon-description">
-                                <p>Rp 150.000</p>
-                            </div>
-                        </div>
-                        <hr class="divider">
-                        <div class="description">
-                            <h3>What's Next?</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero et
-                                fringilla.</p>
-                        </div>
-                        <div class="buttons">
-                            <button class="action-button" onclick="window.location.href = 'testimoni.html';">Testimonies</button>
-                            <button class="action-button-secondary">Download Ticket</button>
-
+                <div class="card-container">
+                    <div class="card-header">
+                        <img src="frontend/images/landing.png" alt="Product Image" class="profile-img">
+                        <div class="header-info">
+                            <h2>John Doe</h2>
+                            <span class="badge">Premium Member</span>
                         </div>
                     </div>
+
+                    <div class="icon-list">
+                        <div class="icon-item">
+                            <img src="frontend/images/icons/calendar.png" alt="Calendar Icon" class="icon">
+                            <p>15-6-2024</p>
+                        </div>
+                        <div class="icon-item">
+                            <img src="frontend/images/icons/people.png" alt="People Icon" class="icon">
+                            <p>1 person</p>
+                        </div>
+                        <div class="icon-item">
+                            <img src="frontend/images/icons/tag.png" alt="Tag Icon" class="icon">
+                            <p>Open Trip</p>
+                        </div>
+                        <div class="icon-item">
+                            <img src="frontend/images/icons/dollar-circle.png" alt="Price Icon" class="icon">
+                            <p>Rp 150.000</p>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="description">
+                        <h3>What's Next?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero et fringilla.
+                        </p>
+                    </div>
+
+                    <div class="button-container">
+                        <button class="action-button"
+                            onclick="window.location.href = 'testimoni.html';">Testimonies</button>
+                        <button class="action-button-secondary">Download Ticket</button>
+                    </div>
                 </div>
+
+                <footer>
+                    <p>&copy; 2024 WaWe Tour and Travel. All rights reserved.</p>
+                </footer>
             </div>
-
-
-            <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 WaWe Tour and Travel. All rights reserved.</p>
-        </footer>
         </main>
         <!-- main section end -->
 
 
-    </div>
+    </body>
 
-</body>
-
-<script src="frontend/scripts/dashboard.js"></script>
-<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script src="frontend/scripts/dashboard.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 
 </html>
