@@ -39,7 +39,7 @@ body {
     /* Make the navbar fixed at the top */
     top: 20px;
     /* Position it at the top */
-    left: 50%;
+    left: 50.79%;
     transform: translateX(-50%);
     /* Center the navbar horizontally */
     width: 70%;
@@ -54,9 +54,18 @@ body {
     /* Add shadow for better visibility */
     transition: all 0.3s ease;
     /* Smooth transition for appearance changes */
-    background-color: #fff;
+    // background-color: #fff;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+    /* Efek blur */
+    -webkit-backdrop-filter: blur(10px);
+
     /* Background color for visibility */
 }
+
+
 
 /* Mengubah padding body agar konten tidak tertutup navbar */
 body {
@@ -70,6 +79,8 @@ body {
         width: 100%;
         /* Full width on screens up to 1280px */
     }
+
+
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -77,6 +88,8 @@ body {
         width: 70%;
         /* Maintain 70% width between 1025px and 1280px */
     }
+
+
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -84,6 +97,8 @@ body {
         width: 80%;
         /* Maintain 80% width between 1024px and 769px */
     }
+
+
 }
 
 @media (max-width: 768px) {
@@ -99,11 +114,16 @@ body {
         top: 0;
         /* Navbar sticks to the top of the screen on smaller screens */
     }
+
+
+
+
 }
 
 /* Styling tambahan untuk navbar saat aktif atau di-scroll */
 .navbar-scrolled {
     background-color: rgba(255, 255, 255, 0.95);
+
     /* Sedikit transparan saat di-scroll */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     /* Menambah bayangan saat di-scroll */
@@ -119,6 +139,20 @@ body {
 //         top: 0; /* Navbar melekat ke bagian atas layar di layar kecil */
 //     }
 // }
+
+
+
+
+/* Ganti warna teks untuk item menu normal */
+.nav-link {
+    color: #333;
+    /* Warna teks default */
+}
+
+.nav-link:hover {
+    color: coral;
+    /* Warna teks saat hover */
+}
 
 /* Navbar Brand */
 .navbar-brand img {
@@ -165,6 +199,7 @@ body {
     font-size: 14px;
     /* Menambahkan pointer pada mouse saat hover */
     // margin-left: auto; /* Posisi tombol di sebelah kanan */
+    font-weight: bold;
 }
 
 /* Hover effect untuk tombol login */
@@ -195,6 +230,7 @@ body {
     cursor: pointer;
     font-size: 14px;
     /* Warna border untuk tombol Register */
+    font-weight: bold;
 }
 
 .btn-register:hover {
@@ -270,11 +306,12 @@ body {
     .navbar {
         top: 20px;
         /* Maintain top offset for large screens */
-        width: 70%;
+        width: 90%;
         /* Maintain width for large screens */
         border-radius: 30px;
         /* Rounded corners */
         max-width: 1200px;
+        left: 51%;
         /* Limit the maximum width */
     }
 
@@ -332,6 +369,33 @@ body {
         justify-content: left;
         /* Pusatkan gambar profil */
     }
+
+    .navbar-profile-mobile .profile-photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    .navbar-profile-mobile .profile-name {
+        display: block;
+        margin-top: 10px;
+    }
+    
+    /* Style for dropdown items */
+    .dropdown-menu {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .dropdown-item {
+        text-align: left;
+    }
+    
+    .dropdown-divider {
+        margin: 0;
+    }
+
+
 }
 
 /* Mobile Devices (Up to 767px) */
@@ -360,6 +424,32 @@ body {
 
     }
 
+    .navbar-profile-mobile .profile-photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    .navbar-profile-mobile .profile-name {
+        display: block;
+        margin-top: 10px;
+    }
+    
+    /* Style for dropdown items */
+    .dropdown-menu {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .dropdown-item {
+        text-align: left;
+    }
+    
+    .dropdown-divider {
+        margin: 0;
+    }
+
+
 
 
 
@@ -381,6 +471,8 @@ body {
         border-radius: 15px;
         /* Further reduce the border-radius */
     }
+
+
 
     body {
         padding-top: 60px;
@@ -2602,13 +2694,24 @@ footer {
 
     }
 
-
-
-    .card-right {
-        // border-bottom-left-radius: 0;
-        // border-bottom-right-radius: 0;
-        border-bottom: 0;
+    .custom-nav-tabs .nav-link {
+        color: #464646;
+        /* Default text color for non-active tabs */
     }
+
+    .custom-nav-tabs .nav-link.active {
+        color: #071C4D;
+        /* Active tab text color */
+    }
+
+
+
+
+    // .card-right {
+    //     border-bottom-left-radius: 0;
+    //     border-bottom-right-radius: 0;
+    //     border-bottom: 0;
+    // }
 
     .features {
         margin-top: 20px;
@@ -2704,8 +2807,6 @@ footer {
         }
     }
 }
-
-
 
 // SUCCESS
 // ** SUCCESS BOOK ** //
@@ -3115,7 +3216,7 @@ footer {
 }
 
 
-.card {
+.card-catalogue {
     position: relative;
     width: calc(25% - 20px);
     /* 4 cards per row, accounting for gaps */
@@ -3265,7 +3366,7 @@ footer {
         width: 100%;
     }
 
-    .card {
+    .card-catalogue {
         width: 100%;
         max-width: 500px;
         /* Ensure cards do not exceed a certain width */
@@ -3279,7 +3380,7 @@ footer {
 
 
     .mobile-menu h2 {
-        
+
         font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 15px;
@@ -3300,7 +3401,7 @@ footer {
         display: none;
     }
 
-    .card {
+    .card-catalogue {
         width: calc(33.333% - 20px);
         /* 3 cards per row */
     }
@@ -3316,7 +3417,7 @@ footer {
         gap: 20px;
     }
 
-    .card {
+    .card-catalogue {
         width: 100%;
         /* Full width of the grid cell */
         max-width: none;
@@ -3327,11 +3428,13 @@ footer {
 
 @media (min-width: 1025px) {
     .menu-button {
-        display: none; /* Hide menu button on desktop */
+        display: none;
+        /* Hide menu button on desktop */
     }
 
     .mobile-menu {
-        display: none; /* Ensure mobile menu is hidden on desktop */
+        display: none;
+        /* Ensure mobile menu is hidden on desktop */
     }
 }
 
