@@ -436,13 +436,13 @@ body {
 }
 
 .overlay h1 {
-  font-size: 3rem;
+  font-size: 30px;
   margin: 0;
   font-weight: bold;
 }
 
 .overlay p {
-  font-size: 1.2rem;
+  font-size: 20px;
   margin: 10px 0 0;
 }
 
@@ -458,10 +458,10 @@ body {
     width: 635px;
   }
   .overlay h1 {
-    font-size: 2.5rem;
+    font-size: 16px;
   }
   .overlay p {
-    font-size: 1rem;
+    font-size: 14px;
   }
 }
 @media (max-width: 768px) {
@@ -492,10 +492,10 @@ body {
     width: 315px;
   }
   .overlay h1 {
-    font-size: 1.5rem;
+    font-size: 14px;
   }
   .overlay p {
-    font-size: 0.8rem;
+    font-size: 12px;
   }
 }
 /* Styling untuk semua device */
@@ -1063,6 +1063,13 @@ body {
     overflow-x: hidden;
     /* Menghilangkan kemampuan scroll horizontal */
   }
+  .card-information {
+    width: 100%;
+    /* Card akan memenuhi lebar layar */
+    max-width: 100%;
+    /* Menghindari elemen melebihi lebar layar */
+    box-sizing: border-box;
+  }
   .details-container {
     flex-direction: column;
     /* Susun vertikal */
@@ -1219,6 +1226,37 @@ body {
   /* Stack content vertically */
   justify-content: flex-end;
   /* Align content at the bottom */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  /* Bayangan halus */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  /* Transisi untuk efek hover */
+  background-position: center;
+  overflow: hidden;
+}
+.section-popular-content .section-popular-travel .card-travel .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Layer of darkness (adjust alpha value as needed) */
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+.section-popular-content .section-popular-travel .card-travel:hover .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  /* Darker overlay on hover */
+}
+.section-popular-content .section-popular-travel .card-travel-content {
+  position: relative;
+  z-index: 2;
+}
+.section-popular-content .section-popular-travel .card-travel:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  /* Bayangan lebih gelap pada hover */
+  transform: translateY(-4px);
+  /* Efek mengangkat card saat hover */
 }
 .section-popular-content .section-popular-travel .travel-price,
 .section-popular-content .section-popular-travel .travel-location {
@@ -1302,6 +1340,18 @@ body {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .card-travel {
+    min-height: 500px;
+    margin: 0 20px;
+  }
+  .section-popular-heading h1 {
+    font-size: 32px;
+  }
+  .section-popular-heading p {
+    font-size: 28px;
+  }
+}
 .faq-section {
   background-color: #f6f8fd;
   /* Background color of the FAQ section */
@@ -1482,6 +1532,9 @@ body {
     flex-direction: column;
     align-items: stretch;
   }
+  .my-service-section {
+    margin: 0 40px;
+  }
   .my-service-content {
     padding-right: 0;
     margin-bottom: 30px;
@@ -1506,6 +1559,7 @@ body {
   .my-service-section {
     padding: 60px 20px;
     /* Adjusted padding for smaller screens */
+    margin: 0 20px;
   }
   .my-service-title {
     font-size: 1.5em;
@@ -1537,7 +1591,7 @@ body {
 .question-card {
   position: relative;
   /* Agar gambar overlay dapat diposisikan dengan absolute relatif terhadap kartu */
-  background: url("../images/contactus-bgblue.png") no-repeat center center;
+  background: url("../images/contact-us-dark.svg") no-repeat center center;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -1692,6 +1746,12 @@ body {
   max-width: 100%;
 }
 
+@media (max-width: 768px) {
+  .section-networks {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 /* Testimonial Section Styles */
 .testimonial-section {
   background: linear-gradient(135deg, #0723c1, coral);
@@ -1886,6 +1946,7 @@ body {
     /* Padding adjustments */
     min-width: auto;
     /* Remove minimum width */
+    margin-top: 40px;
   }
 }
 @media (max-width: 576px) {
@@ -1915,11 +1976,13 @@ body {
 }
 
 footer {
-  background-color: #f6f8fd;
   position: relative;
   width: 100%;
   min-height: 350px;
   padding: 3rem 1rem;
+  border-radius: 100px 100px 0 0;
+  background: radial-gradient(circle, #071C4D, #000000);
+  color: white;
 }
 
 .container .container-footer {
@@ -1951,13 +2014,31 @@ footer .container {
   /* Ensure columns don't get too narrow */
 }
 
+#useful-link .links a {
+  color: white;
+  text-decoration: none;
+}
+
+#useful-link .links a:hover {
+  color: #f0f0f0;
+}
+
+#services .links a {
+  color: white;
+  text-decoration: none;
+}
+
+#services .links a:hover {
+  color: #f0f0f0;
+}
+
 .col-footer .logo-footer {
   width: 100px;
   margin-bottom: 25px;
 }
 
 .col-footer h3 {
-  color: #071C4D;
+  color: white;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -2017,7 +2098,7 @@ footer .container {
   position: absolute;
   top: 5px;
   left: -10px;
-  background-color: #071C4D;
+  background-color: coral;
   transition: 0.5s ease;
   opacity: 0;
 }
@@ -2164,8 +2245,10 @@ footer .container-fluid {
   color: #071C4D;
 }
 .section-details-content .card-details .bank .bank-image {
-  width: 45px;
-  height: 45px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  width: 150px;
+  height: 150px;
   float: left;
 }
 .section-details-content .card-details .disclaimer {
@@ -2221,7 +2304,7 @@ footer .container-fluid {
   height: 40px;
 }
 .section-details-content .join-container {
-  margin-top: -16px;
+  margin-top: 20px;
 }
 .section-details-content .btn-join-now {
   background-color: coral;
@@ -2234,6 +2317,34 @@ footer .container-fluid {
   color: #FFF;
 }
 
+@media (max-width: 768px) {
+  .card-right {
+    margin-top: 20px;
+  }
+  .tab-pane {
+    padding-left: 15px;
+  }
+  .join-container {
+    padding-left: 15px;
+  }
+  .text-muted {
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 1024px) {
+  .card-right {
+    margin-top: 20px;
+  }
+  .tab-pane {
+    padding-left: 15px;
+  }
+  .join-container {
+    padding-left: 15px;
+  }
+  .text-muted {
+    margin-bottom: 70px;
+  }
+}
 .section-success {
   height: 90vh;
 }
