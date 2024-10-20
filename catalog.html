@@ -1,275 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="frontend/styles/main.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="frontend/styles/main.css" />
 
-    <link rel="stylesheet" href="frontend/styles/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="frontend/styles/swiper-bundle.min.css" />
 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
 
-<body>
-    <!-- Navbar -->
-    <div class="container">
-        <nav class="row navbar navbar-expand-lg navbar-light bg-white" id="navbar">
-            <a href="index.html" class="navbar-brand">
-                <img src="frontend/images/logo.png" alt="Logo Poling" />
-            </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navb">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <body>
+        <!-- Navbar -->
+        <div class="container">
+            <nav class="row navbar navbar-expand-lg navbar-light bg-white" id="navbar">
+                <a href="index.html" class="navbar-brand">
+                    <img src="frontend/images/logo.png" alt="Logo Poling" />
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navb">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navb">
-                <ul class="navbar-nav">
-                    <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link">Catalog</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-                            Services
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Link</a>
-                            <a href="#" class="dropdown-item">Link</a>
-                            <a href="#" class="dropdown-item">Link</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link">Testimonial</a>
-                    </li>
-                </ul>
-                <!-- Tambahkan tombol login di dalam collapse agar muncul di mobile -->
-                <a href="login.html" class="btn btn-login ml-auto d-lg-none">Login</a>
+                <div class="collapse navbar-collapse justify-content-center" id="navb">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-md-2">
+                            <a href="#" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item mx-md-2">
+                            <a href="#" class="nav-link">Destinations</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                                Booking
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Ticket</a>
+                            </div>
+                        </li>
+                        <li class="nav-item mx-md-2">
+                            <a href="#" class="nav-link">Testimonial</a>
+                        </li>
+                    </ul>
+                    <!-- Tambahkan tombol login di dalam collapse agar muncul di mobile -->
+                    <a href="login.html" class="btn btn-login ml-auto d-lg-none">Login</a>
 
-                <!-- Profil untuk mobile di dalam collapse -->
-                <div class="navbar-profile-mobile d-lg-none mt-3 text-center">
-                    <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo" />
-                    <span class="profile-name ml-2">John Doe</span>
-                </div>
-            </div>
-            <!-- Tambahkan elemen profil di sini -->
-            <div class="navbar-profile d-none d-lg-flex align-items-center ml-auto">
-                <span class="profile-name ml-2">John Doe</span>
-                <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <!-- Profil untuk mobile di dalam collapse -->
+                    <div class="navbar-profile-mobile d-lg-none mt-3 text-center">
                         <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo" />
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <!-- Konten dropdown -->
-                        <a class="dropdown-item" href="dashboard.html">My Ticket</a>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                        <span class="profile-name ml-2">John Doe</span>
                     </div>
                 </div>
-            </div>
+                <!-- Tambahkan elemen profil di sini -->
+                <div class="navbar-profile d-none d-lg-flex align-items-center ml-auto">
+                    <span class="profile-name ml-2">John Doe</span>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo" />
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <!-- Konten dropdown -->
+                            <a class="dropdown-item" href="dashboard.html">My Ticket</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- <a href="register.html" class="btn btn-register d-none d-lg-inline-block ml-lg-3">Register</a> -->
-            <!-- <a href="login.html" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</a> -->
-        </nav>
-    </div>
+                <!-- <a href="register.html" class="btn btn-register d-none d-lg-inline-block ml-lg-3">Register</a> -->
+                <!-- <a href="login.html" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</a> -->
+            </nav>
+        </div>
 
-    <main>
-        <section class="catalogue">
-            <div class="hero-title">
-                <h1>Title Here</h1>
-                <p>Subtitle Here</p>
-            </div>
-            <div class="content">
-                <div class="menu">
+        <main>
+            <section class="catalogue">
+                <div class="hero-title">
+                    <h1>Title Here</h1>
+                    <p>Subtitle Here</p>
+                </div>
+                <div class="content">
+                    <div class="menu" id="menu-sort">
+                        <h2>Sort</h2>
+                        <div class="menu-item">
+                            <input type="checkbox" id="sort1" name="sort1" />
+                            <label for="sort1">Sort Option 1</label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="checkbox" id="sort2" name="sort2" />
+                            <label for="sort2">Sort Option 2</label>
+                        </div>
+                        <div class="menu-item" style="margin-bottom: 50px;">
+                            <input type="checkbox" id="sort3" name="sort3" />
+                            <label for="sort3">Sort Option 3</label>
+                        </div>
+
+                        <h2>Type</h2>
+                        <div class="menu-item">
+                            <input type="checkbox" id="type1" name="type1" />
+                            <label for="type1">Type Option 1</label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="checkbox" id="type2" name="type2" />
+                            <label for="type2">Type Option 2</label>
+                        </div>
+                        <div class="menu-item">
+                            <input type="checkbox" id="type3" name="type3" />
+                            <label for="type3">Type Option 3</label>
+                        </div>
+                    </div>
+                    <div class="catalog-cards">
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="details.html" class="card-link">
+                            <div class="card-catalogue">
+                                <div class="card-background"
+                                    style="background-image: url('frontend/images/landing-1.jpg');">
+                                    <div class="card-overlay"></div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="text-content">
+                                        <h3>Product Title</h3>
+                                        <p class="price">Rp 399.000</p>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>17 Days</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>13 Persons</span>
+                                        </div>
+                                        <div class="icon-item">
+                                            <ion-icon name="calendar-outline"></ion-icon>
+                                            <span>129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Repeat card as needed -->
+                </div>
+
+                <!-- Floating button for mobile -->
+                <button class="menu-button" onclick="toggleMobileMenu()"><ion-icon
+                        name="filter-outline"></ion-icon></button>
+
+                <!-- Mobile menu -->
+                <div class="mobile-menu">
+                    <!-- <button onclick="toggleMobileMenu()">Close</button> -->
+                    <span class="material-icons" onclick="toggleMobileMenu()" style="margin-bottom: 20px;">close</span>
+                    <!-- Mobile menu content, replicate existing menu here -->
                     <h2>Sort</h2>
                     <div class="menu-item">
-                        <input type="checkbox" id="sort1" name="sort1" />
-                        <label for="sort1">Sort Option 1</label>
+                        <input type="checkbox" id="sort1-mobile" name="sort1" />
+                        <label for="sort1-mobile">Sort Option 1</label>
                     </div>
                     <div class="menu-item">
-                        <input type="checkbox" id="sort2" name="sort2" />
-                        <label for="sort2">Sort Option 2</label>
+                        <input type="checkbox" id="sort2-mobile" name="sort2" />
+                        <label for="sort2-mobile">Sort Option 2</label>
                     </div>
                     <div class="menu-item" style="margin-bottom: 50px;">
-                        <input type="checkbox" id="sort3" name="sort3" />
-                        <label for="sort3">Sort Option 3</label>
+                        <input type="checkbox" id="sort3-mobile" name="sort3" />
+                        <label for="sort3-mobile">Sort Option 3</label>
                     </div>
-
                     <h2>Type</h2>
                     <div class="menu-item">
-                        <input type="checkbox" id="type1" name="type1" />
-                        <label for="type1">Type Option 1</label>
+                        <input type="checkbox" id="type1-mobile" name="type1" />
+                        <label for="type1-mobile">Type Option 1</label>
                     </div>
                     <div class="menu-item">
-                        <input type="checkbox" id="type2" name="type2" />
-                        <label for="type2">Type Option 2</label>
+                        <input type="checkbox" id="type2-mobile" name="type2" />
+                        <label for="type2-mobile">Type Option 2</label>
                     </div>
                     <div class="menu-item">
-                        <input type="checkbox" id="type3" name="type3" />
-                        <label for="type3">Type Option 3</label>
-                    </div>
-                </div>
-                <div class="catalog-cards">
-                    <div class="card-catalogue">
-                        <a href="details.html" class="card-link">
-                            <div class="card-background"
-                                style="background-image: url('frontend/images/landing-1.jpg');"></div>
-                            <div class="card-content">
-                                <div class="text-content">
-                                    <h3>Product Title</h3>
-                                    <p class="price">Rp 399.000</p>
-                                </div>
-                                <div class="icons">
-                                    <div class="icon-item">
-                                        <ion-icon name="calendar-outline"></ion-icon>
-                                        <span>17 Days</span>
-                                    </div>
-                                    <div class="icon-item">
-                                        <ion-icon name="calendar-outline"></ion-icon>
-                                        <span>13 Persons</span>
-                                    </div>
-                                    <div class="icon-item">
-                                        <ion-icon name="calendar-outline"></ion-icon>
-                                        <span>129</span>
-                                    </div>
-                                </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Repeat card as needed -->
-            </div>
-
-            <!-- Floating button for mobile -->
-            <button class="menu-button" onclick="toggleMobileMenu()"><ion-icon
-                    name="filter-outline"></ion-icon></button>
-
-            <!-- Mobile menu -->
-            <div class="mobile-menu">
-                <!-- <button onclick="toggleMobileMenu()">Close</button> -->
-                <span class="material-icons" onclick="toggleMobileMenu()" style="margin-bottom: 20px;">close</span>
-                <!-- Mobile menu content, replicate existing menu here -->
-                <h2>Sort</h2>
-                <div class="menu-item">
-                    <input type="checkbox" id="sort1-mobile" name="sort1" />
-                    <label for="sort1-mobile">Sort Option 1</label>
-                </div>
-                <div class="menu-item">
-                    <input type="checkbox" id="sort2-mobile" name="sort2" />
-                    <label for="sort2-mobile">Sort Option 2</label>
-                </div>
-                <div class="menu-item" style="margin-bottom: 50px;">
-                    <input type="checkbox" id="sort3-mobile" name="sort3" />
-                    <label for="sort3-mobile">Sort Option 3</label>
-                </div>
-                <h2>Type</h2>
-                <div class="menu-item">
-                    <input type="checkbox" id="type1-mobile" name="type1" />
-                    <label for="type1-mobile">Type Option 1</label>
-                </div>
-                <div class="menu-item">
-                    <input type="checkbox" id="type2-mobile" name="type2" />
-                    <label for="type2-mobile">Type Option 2</label>
-                </div>
-                <div class="menu-item">
-                    <input type="checkbox" id="type3-mobile" name="type3" />
-                    <label for="type3-mobile">Type Option 3</label>
-                </div>
-            </div>
-
-
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container container-footer">
-            <div class="row row-footer">
-                <div class="col col-footer" id="company">
-                    <img src="frontend/images/logo.png" alt="" class="logo-footer" />
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-                        ullam.
-                    </p>
-                    <div class="social">
-                        <!-- <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a> -->
-                        <a href="#"><img src="frontend/images/icons/facebook.png" alt="Facebook Icon"
-                                class="social-icon" /></a>
-                        <a href="#"><img src="frontend/images/icons/instagram.png" alt="Instagram Icon"
-                                class="social-icon" /></a>
-                        <a href="#"><img src="frontend/images/icons/whatsapp.png" alt="WhatsApp Icon"
-                                class="social-icon" /></a>
-                    </div>
-                </div>
-                <div class="col col-footer" id="services">
-                    <h3>Services</h3>
-                    <div class="links">
-                        <a href="#">Ilustration</a>
-                        <a href="#">Ilustration</a>
-                        <a href="#">Ilustration</a>
-                        <a href="#">Ilustration</a>
-                    </div>
-                </div>
-                <div class="col col-footer" id="useful-link">
-                    <h3>Links</h3>
-                    <div class="links">
-                        <a href="#">About</a>
-                        <a href="#">About</a>
-                        <a href="#">About</a>
-                        <a href="#">About</a>
+                        <input type="checkbox" id="type3-mobile" name="type3" />
+                        <label for="type3-mobile">Type Option 3</label>
                     </div>
                 </div>
 
-                <div class="col col-footer" id="contact">
-                    <h3>Contact</h3>
-                    <div class="contact-details-footer">
-                        <!-- <ion-icon name="location-outline"></ion-icon> -->
-                        <img src="frontend/images/icons/location.png" alt="" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container container-footer">
+                <div class="row row-footer">
+                    <div class="col col-footer" id="company">
+                        <img src="frontend/images/logo.svg" alt="" class="logo-footer" />
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
+                            ullam.
+                        </p>
+                        <div class="social">
+                            <!-- <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a> -->
+                            <a href="#"><img src="frontend/images/icons/facebook-white.png" alt="Facebook Icon"
+                                    class="social-icon" /></a>
+                            <a href="#"><img src="frontend/images/icons/instagram-white.png" alt="Instagram Icon"
+                                    class="social-icon" /></a>
+                            <a href="#"><img src="frontend/images/icons/whatsapp-white.png" alt="WhatsApp Icon"
+                                    class="social-icon" /></a>
+                        </div>
                     </div>
-                    <div class="contact-details-footer">
-                        <!-- <ion-icon name="call-outline"></ion-icon> -->
-                        <img src="frontend/images/icons/call.png" alt="" />
-                        <p>+62 123 456 7890</p>
+                    <div class="col col-footer" id="services">
+                        <h3>Services</h3>
+                        <div class="links">
+                            <a href="#">Services</a>
+                            <a href="#">Services</a>
+                            <a href="#">Services</a>
+                            <a href="#">Services</a>
+                        </div>
+                    </div>
+                    <div class="col col-footer" id="useful-link">
+                        <h3>Links</h3>
+                        <div class="links">
+                            <a href="#">About</a>
+                            <a href="#">About</a>
+                            <a href="#">About</a>
+                            <a href="#">About</a>
+                        </div>
+                    </div>
+
+                    <div class="col col-footer" id="contact">
+                        <h3>Contact</h3>
+                        <div class="contact-details-footer">
+                            <!-- <ion-icon name="location-outline"></ion-icon> -->
+                            <img src="frontend/images/icons/location-white.png" alt="" />
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="contact-details-footer">
+                            <!-- <ion-icon name="call-outline"></ion-icon> -->
+                            <img src="frontend/images/icons/call-white.png" alt="" />
+                            <p>+62 123 456 7890</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container-fluid">
-            <div class="row border-top justify-content-center align-items-center pt-4">
-                <div class="col-auto text-gray-500 font-weight-light">
-                    2024 Copyright Poling ❤️ All rights reserved
+            <div class="container-fluid">
+                <div class="row border-top justify-content-center align-items-center pt-4">
+                    <div class="col-auto text-gray-500 font-weight-light">
+                        2024 Copyright WaWe ❤️ All rights reserved
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="frontend/scripts/swiper-bundle.min.jsx"></script>
-    <script src="frontend/scripts/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
-    <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
-    <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
-    <script src="frontend/libraries/retina/retina.min.js"></script>
-</body>
+        <script src="frontend/scripts/swiper-bundle.min.jsx"></script>
+        <script src="frontend/scripts/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
+        <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
+        <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+        <script src="frontend/libraries/retina/retina.min.js"></script>
+    </body>
 
 </html>

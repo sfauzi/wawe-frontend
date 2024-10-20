@@ -86,10 +86,12 @@ body {
 .badge {
   background-color: #071c4d;
   color: white;
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 15px;
   font-size: 0.9rem;
   font-weight: 600;
+  width: auto;
+  text-align: center;
   margin-top: 5px;
 }
 

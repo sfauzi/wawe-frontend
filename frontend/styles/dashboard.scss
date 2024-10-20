@@ -568,6 +568,12 @@ main .recent_order .detail-button {
     cursor: pointer;
 }
 
+.detail-button:hover {
+    box-shadow: 0 0 0 .25rem #fdb50d40 !important;
+    background-color: coral;
+    transition: all .4s;
+}
+
 
 .table-responsive {
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -816,7 +822,7 @@ main .settings .edit-profile-button {
     padding: 10px;
     // border: 1px solid #ccc;
     border-radius: 20px; /* Rounded corners */
-    background-color: #f0f0f0; /* Gray background */
+    background-color: #F4F6F8; /* Gray background */
     font-size: 14px;
     box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
@@ -825,7 +831,7 @@ main .settings .edit-profile-button {
     width: calc(100% - 20px);
     padding: 10px;
     border-radius: 20px; /* Rounded corners */
-    background-color: #f0f0f0; /* Gray background */
+    background-color: #F4F6F8; /* Gray background */
     font-size: 14px;
     box-sizing: border-box; /* Ensures padding and border are included in the width */
     resize: vertical; /* Allows vertical resizing only */
@@ -839,6 +845,7 @@ main .settings .edit-profile-button {
 
 .btn-submit {
     width: calc(100% - 20px); /* Match the width to input fields */
+    margin-left: -15px;
     padding: 10px;
     background-color: coral;
     color: white;
@@ -854,7 +861,9 @@ main .settings .edit-profile-button {
 }
 
 .btn-submit:hover {
-    background-color: rgb(250, 147, 110);
+    box-shadow: 0 0 0 .25rem #fdb50d40 !important;
+    background-color: coral;
+    transition: all .4s;
 }
 
 // *** END EDIT PROFILE & PASS MENU ***//

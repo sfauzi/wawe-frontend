@@ -247,7 +247,7 @@ body {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background-color: coral;
+  background-color: rgb(255, 127, 80);
   color: #fff;
 }
 
@@ -413,6 +413,10 @@ body {
   border-radius: 20px;
 }
 
+.carousel-indicators {
+  bottom: 50px !important;
+}
+
 .carousel-item img {
   border-radius: 20px;
   height: 500px;
@@ -480,15 +484,18 @@ body {
   .overlay p {
     font-size: 0.9rem;
   }
+  .carousel-indicators {
+    bottom: 0 !important;
+  }
 }
 @media (max-width: 576px) {
   .curved-header {
-    height: 150px;
+    height: 200px;
     width: 315px;
     margin-top: 50px;
   }
   .carousel-item img {
-    height: 150px;
+    height: 200px;
     width: 315px;
   }
   .overlay h1 {
@@ -840,14 +847,17 @@ body {
   color: #fff;
   border: none;
   font-weight: 700;
-  padding: 10px;
+  font-size: 14px;
+  padding: 15px;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .contact-seller-btn:hover {
-  background-color: rgb(242, 74, 12);
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
 }
 
 .product-description {
@@ -1054,7 +1064,9 @@ body {
 }
 
 .purchase-btn:hover {
-  background-color: rgb(242, 74, 12);
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
 }
 
 /* Responsive styling untuk perangkat dengan lebar kurang dari 768px (mobile) */
@@ -1522,7 +1534,9 @@ body {
 }
 
 .get-started-button:hover {
-  background-color: rgb(242, 74, 12);
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
   /* Darker shade on hover */
 }
 
@@ -1644,21 +1658,24 @@ body {
   margin-bottom: 20px;
 }
 
-.question-content .btn {
-  display: inline-block;
+.btn-contactus {
   background-color: coral;
-  /* Warna latar belakang tombol dengan transparansi */
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
   color: #fff;
-  text-decoration: none;
+  border: none;
+  font-weight: 700;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 30px;
+  /* Rounded border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.question-content .btn:hover {
-  background-color: rgb(242, 74, 12);
-  /* Mengatur warna latar belakang tombol saat hover */
+.btn-contactus:hover {
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
+  /* Darker shade on hover */
 }
 
 /* Media Queries untuk Tablet dan Mobile */
@@ -1816,8 +1833,9 @@ body {
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
-  background-color: #f5b776;
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
 }
 
 .btn-secondary {
@@ -1827,8 +1845,9 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: coral;
-  color: white;
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: transparent;
+  transition: all 0.4s;
 }
 
 .buttons button {
@@ -2173,6 +2192,7 @@ footer .container-fluid {
 .section-details-content {
   margin-top: -210px;
   min-height: 100vh;
+  margin-bottom: 50px;
 }
 .section-details-content .breadcrumb {
   background-color: transparent;
@@ -2205,16 +2225,20 @@ footer .container-fluid {
 }
 .section-details-content .card-details .trip-informations th {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   color: #071C4D;
 }
 .section-details-content .card-details .trip-informations td {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   color: #b1b1b1;
 }
 .section-details-content .card-details .trip-informations .text-blue {
   color: #071C4D;
+  font-weight: bold;
+}
+.section-details-content .card-details .trip-informations .text-green {
+  color: #1EBA53;
   font-weight: bold;
 }
 .section-details-content .card-details .trip-informations .text-orange {
@@ -2263,12 +2287,15 @@ footer .container-fluid {
   padding-right: 30px;
 }
 .section-details-content .card-details .btn-add-now {
-  background-color: #071C4D;
+  background-color: coral;
+  font-weight: bold;
   color: #FFF;
+  border-radius: 15px;
 }
 .section-details-content .card-details .btn-add-now:hover {
-  background-color: #1b3b86;
-  color: #FFF;
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
 }
 .section-details-content .custom-nav-tabs .nav-link {
   color: #464646;
@@ -2276,6 +2303,7 @@ footer .container-fluid {
 }
 .section-details-content .custom-nav-tabs .nav-link.active {
   color: #071C4D;
+  font-weight: 500;
   /* Active tab text color */
 }
 .section-details-content .features {
@@ -2313,8 +2341,12 @@ footer .container-fluid {
   font-weight: 700;
 }
 .section-details-content .btn-join-now:hover {
-  background-color: #FFB57C;
-  color: #FFF;
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
+}
+.section-details-content .tab-pane p {
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -2618,6 +2650,7 @@ footer .container-fluid {
 
 .hero-title {
   margin-bottom: 20px;
+  padding: 0 30px;
 }
 
 .hero-title h1 {
@@ -2729,14 +2762,18 @@ footer .container-fluid {
 }
 
 .catalog-cards {
-  display: flex;
-  grid-template-columns: repeat(4, 1fr);
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .card-link {
   color: white;
+  display: block;
+}
+
+.card-link + .card-link {
+  margin-left: 0;
 }
 
 .card-link:hover,
@@ -2760,6 +2797,12 @@ footer .container-fluid {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: none;
+  transition: transform 0.3s ease;
+}
+
+.card-catalogue:hover {
+  transform: translateY(-10px);
+  /* Lift card on hover */
 }
 
 .card-background {
@@ -2778,11 +2821,29 @@ footer .container-fluid {
   /* Background behind content */
 }
 
-.card-content {
-  position: relative;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
-  padding: 15px;
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
+  transition: background 0.3s ease;
+  /* Add transition for hover effect */
+}
+
+.card:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  /* Darker overlay on hover */
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2882,71 +2943,480 @@ footer .container-fluid {
   /* Show menu when active */
 }
 
-/* Media query for mobile devices */
+@media (min-width: 1025px) {
+  .menu-button {
+    display: none;
+    /* Hide menu button on desktop and larger screens */
+  }
+}
+@media (max-width: 992px) {
+  .catalog-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on tablets */
+    gap: 20px;
+    padding: 0 30px;
+    /* Space between cards */
+  }
+}
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  /* Styles for tablets */
+  .menu {
+    display: none;
+    /* Hide menu on tablets */
+  }
   .content {
     flex-direction: column;
+    /* Stack content vertically on tablets */
+  }
+  .catalog-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on tablets */
+    gap: 20px;
+    /* Space between cards */
+  }
+  .card {
+    width: 100%;
+    /* Full width for cards */
+  }
+  .mobile-menu {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    /* Efek blur */
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+/* Responsive for Tablet */
+@media (max-width: 768px) {
+  /* Styles for mobile */
+  .hero-title {
+    padding: 0;
+  }
+  .card-catalogue {
+    width: calc(100% - 5px);
+    /* Satu card per baris di mobile */
   }
   .menu {
     display: none;
   }
-  .catalog-cards {
-    width: 100%;
+  .content {
+    flex-direction: column;
   }
-  .card-catalogue {
+  .catalog-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+  .card {
     width: 100%;
-    max-width: 500px;
-    /* Ensure cards do not exceed a certain width */
-    margin: 0 auto;
-    /* Center cards */
   }
   .menu-button {
     display: flex;
   }
-  .mobile-menu h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
   .mobile-menu {
     display: none;
+  }
+  .mobile-menu h2 {
+    font-size: 22px;
+    font-weight: bold !important;
+  }
+  .mobile-menu {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    /* Efek blur */
+    -webkit-backdrop-filter: blur(10px);
   }
   .mobile-menu.active {
     display: block;
   }
 }
-@media (max-width: 1024px) and (min-width: 769px) {
-  .menu {
-    display: none;
-  }
-  .card-catalogue {
-    width: calc(33.333% - 20px);
-    /* 3 cards per row */
-  }
+/* Section Heading Review */
+.section-review-header {
+  min-height: 310px;
+  background: radial-gradient(circle, #071C4D, #000000);
+  margin-top: -90px;
+  display: flex;
+  flex-direction: column;
+  /* Atur item secara vertikal */
+  justify-content: center;
+  /* Pusatkan secara vertikal */
+  align-items: center;
+  /* Pusatkan secara horizontal */
+  text-align: center;
+  /* Atur teks agar rata tengah */
 }
-@media (max-width: 1024px) and (min-width: 769px) and (min-height: 600px) {
-  .catalog-cards {
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 cards per row on tablets */
-    gap: 20px;
+
+.container-header-review {
+  margin-bottom: -60px;
+}
+
+.section-review-header h1 {
+  font-size: 36px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-review-header p {
+  font-size: 18px;
+  margin-top: 0;
+  color: #fff;
+}
+
+.section-heading-review {
+  color: #071C4D;
+  background: radial-gradient(circle, #071C4D, #000000);
+  text-align: center;
+  padding: 50px 0;
+  position: relative;
+  height: -100px;
+}
+
+.section-heading-review h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-heading-review p {
+  font-size: 18px;
+}
+
+/* Section Client Says */
+.section-client-says {
+  padding: 50px 0;
+  background-color: #f6f8fd;
+}
+
+.review-heading {
+  display: flex;
+  padding: 0 45px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.review-heading h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.review-heading p {
+  text-align: right;
+  max-width: 500px;
+  font-size: 18px;
+}
+
+/* Review Cards */
+.review-cards {
+  display: flex;
+  /* Menyusun card secara horizontal */
+  gap: 20px;
+  /* Jarak antara card */
+  flex-wrap: wrap;
+  /* Mengizinkan card membungkus jika layar kecil */
+  justify-content: center;
+  /* Mengatur agar card berada di tengah */
+}
+
+.review-card {
+  background-color: #fff;
+  width: 330px;
+  /* Atur lebar card */
+  padding: 25px;
+  /* Atur padding card agar tidak terlalu besar */
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  /* Mengatur elemen di dalam card secara vertikal */
+}
+
+.review-card:hover {
+  box-shadow: 24px 24px 40px #cccccc, -24px -24px 40px #f4f4f4;
+}
+
+.review-message {
+  font-size: 14px;
+  /* Ukuran font yang lebih kecil untuk pesan review */
+  margin-bottom: 10px;
+  /* Jarak di bawah pesan review */
+  line-height: 1.4;
+  /* Jarak antar baris untuk tampilan lebih rapi */
+}
+
+/* Read More link */
+.read-more {
+  color: blue;
+  /* Warna untuk link */
+  cursor: pointer;
+  /* Menunjukkan bahwa ini dapat diklik */
+  font-size: 14px;
+  /* Ukuran font */
+  margin-left: 5px;
+  /* Jarak antara teks akhir dan ...more */
+}
+
+.review-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  /* Ukuran font yang lebih kecil untuk judul */
+  margin-bottom: 5px;
+  /* Jarak yang lebih kecil di bawah judul */
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  /* Mengatur footer ke bawah */
+}
+
+.review-image {
+  width: 40px;
+  /* Ukuran gambar yang lebih kecil */
+  height: 40px;
+  /* Ukuran gambar yang lebih kecil */
+  border-radius: 50%;
+  margin-right: 8px;
+  /* Jarak yang lebih kecil antara gambar dan teks */
+}
+
+.review-details {
+  display: flex;
+  padding-bottom: 0;
+  flex-direction: column;
+  /* Mengatur detail review secara vertikal */
+}
+
+.name-user-review {
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 14px;
+  /* Ukuran font yang lebih kecil */
+}
+
+.created_at {
+  font-size: 12px;
+  /* Ukuran font yang lebih kecil untuk tanggal */
+  color: #888;
+  margin-top: 2px;
+  /* Jarak di atas tanggal */
+}
+
+/* Section About Us */
+.section-about-us {
+  display: flex;
+  /* Mengatur layout menjadi flex untuk menyusun item secara horizontal */
+  justify-content: center;
+  /* Memusatkan elemen secara horizontal */
+  padding: 50px 0;
+  /* Jarak atas dan bawah */
+}
+
+.container-about {
+  display: flex;
+  /* Menjaga konten dalam satu baris */
+  width: 80%;
+  /* Lebar kontainer untuk memberi ruang di kanan dan kiri */
+  max-width: 1200px;
+  /* Lebar maksimum untuk menjaga proporsi di layar besar */
+}
+
+.about-image {
+  width: 50%;
+  /* Atur lebar gambar menjadi 50% dari kontainer */
+  border-radius: 12px;
+}
+
+.about-content {
+  width: 50%;
+  /* Atur lebar konten menjadi 50% dari kontainer */
+  padding-left: 30px;
+  /* Jarak antara gambar dan konten */
+  text-align: left;
+  /* Teks rata kiri */
+}
+
+.about-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about-content h1 {
+  font-weight: bold;
+}
+
+.learn-more-btn {
+  padding: 10px 20px;
+  background-color: coral;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.learn-more-btn:hover {
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
+  /* Animasi transisi saat hover */
+}
+
+/* Section Let's Get Started */
+.section-lets-started {
+  padding: 100px 0;
+}
+
+.card-test {
+  padding: 50px;
+  background: url("../images/bg-verify.svg") center center/cover no-repeat;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-test h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card-test h1 {
+  font-size: 36px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.get-started-btn {
+  padding: 10px 20px;
+  background-color: coral;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.get-started-btn:hover {
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
+  /* Animasi transisi saat hover */
+}
+
+/* Untuk Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Section Heading Review */
+  .container-header-review {
+    padding: 0 10px;
+    margin-bottom: -100px;
   }
-  .card-catalogue {
+  .container-header-review h1 {
+    font-size: 28px;
+  }
+  .container-header-review p {
+    font-size: 16px;
+  }
+  /* Section Client Says */
+  .review-heading h1 {
+    font-size: 26px;
+  }
+  .review-heading p {
+    font-size: 16px;
+  }
+  .review-heading {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-card {
     width: 100%;
-    /* Full width of the grid cell */
-    max-width: none;
-    /* Remove the maximum width */
+    max-width: 500px;
+    /* Agar tidak terlalu besar di layar tablet */
+    margin-top: -20px;
+  }
+  /* Section About Us */
+  .container-about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-image,
+  .about-content {
+    width: 100%;
+    text-align: center;
+  }
+  .about-content {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  /* Section Let's Get Started */
+  .card-test {
+    padding: 30px;
+    max-width: 90%;
+  }
+  .card-test h3 {
+    font-size: 20px;
+  }
+  .card-test h1 {
+    font-size: 28px;
   }
 }
-@media (min-width: 1025px) {
-  .menu-button {
-    display: none;
-    /* Hide menu button on desktop */
+/* Untuk Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  /* Section Heading Review */
+  .container-header-review {
+    padding: 0 10px;
+    margin-bottom: -100px;
   }
-  .mobile-menu {
-    display: none;
-    /* Ensure mobile menu is hidden on desktop */
+  .container-header-review h1 {
+    font-size: 28px;
+  }
+  .container-header-review p {
+    font-size: 16px;
+  }
+  /* Section Client Says */
+  .review-heading {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-heading h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .review-heading p {
+    text-align: center;
+    font-size: 14px;
+    max-width: 90%;
+  }
+  .review-card {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  /* Section About Us */
+  .container-about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-image,
+  .about-content {
+    width: 100%;
+    text-align: center;
+  }
+  .about-content {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .card-test {
+    margin-top: -70px;
   }
 }/*# sourceMappingURL=main.css.map */

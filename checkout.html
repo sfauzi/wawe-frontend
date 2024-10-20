@@ -143,8 +143,148 @@
 
 
                         <!-- Card Kanan -->
-                        <div class="col-lg-4">
+
+                        <div class="pl-2 col-lg-4 mt-0">
+                            <!-- Card details containing nav-tabs and content -->
                             <div class="card card-details card-right">
+                                <!-- Centered Nav tabs -->
+                                <ul class="nav nav-tabs d-flex justify-content-center custom-nav-tabs" id="paymentTabs"
+                                    role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="downpayment-tab" data-toggle="tab"
+                                            href="#downpayment" role="tab" aria-controls="downpayment"
+                                            aria-selected="true">Down Payment</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="fullpayment-tab" data-toggle="tab" href="#fullpayment"
+                                            role="tab" aria-controls="fullpayment" aria-selected="false">Full
+                                            Payment</a>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab content -->
+                                <div class="tab-content mt-4" id="paymentTabsContent">
+                                    <!-- Down Payment Tab -->
+                                    <div class="tab-pane fade show active" id="downpayment" role="tabpanel"
+                                        aria-labelledby="downpayment-tab">
+                                        <h2>Down Payment Information</h2>
+                                        <p>Anda perlu melunasi pembayaran secara cash pada saat hari keberangkatan</p>
+                                        <table class="trip-informations">
+                                            <tr>
+                                                <th width="50%">Payment</th>
+                                                <td width="50%" class="text-right text-blue">Down Payment 30%</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="50%">Sub Total</th>
+                                                <td width="50%" class="text-right text-blue">Rp 1.500.000</td>
+                                            </tr>
+
+                                           
+                                            <tr>
+                                                <th width="50%">Unique Code</th>
+                                                <td width="50%" class="text-right text-green">-Rp 286</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="50%">PPN 11%</th>
+                                                <td width="50%" class="text-right text-green">+Rp 150.000</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="50%">Grand Total</th>
+                                                <td width="50%" class="text-right text-total">
+                                                    <span class="text-blue">Rp 150.000</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <hr>
+                                        <p style="font-size: 14px;"></p>
+                                        Presented By
+                                        </p>
+
+                                        <div class="bank">
+                                            <div class="bank-item pb-3">
+                                                <img src="frontend/images/midtrans-logo.svg" alt="" class="bank-image">
+                                                <div class="description"></div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Full Payment Tab -->
+                                    <div class="tab-pane fade" id="fullpayment" role="tabpanel"
+                                        aria-labelledby="fullpayment-tab">
+                                        <h2>Full Payment Information</h2>
+                                        <p>Anda tidak perlu membayar biaya tambahan apapun pada saat hari keberangkatan
+                                        </p>
+                                        <table class="trip-informations w-100">
+                                            <tr>
+                                                <th width="50%">Payment</th>
+                                                <td width="50%" class="text-right text-blue">Full Payment</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="50%">Sub Total</th>
+                                                <td width="50%" class="text-right text-blue">Rp 5.550.000</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th width="50%">Unique Code</th>
+                                                <td width="50%" class="text-right text-green">-Rp 286</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="50%">PPN 11%</th>
+                                                <td width="50%" class="text-right text-green">+Rp 150.000</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="50%">Grand Total</th>
+                                                <td width="50%" class="text-right text-total">
+                                                    <span class="text-blue">Rp 150.000</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <hr>
+                                        <p style="font-size: 14px;"></p>
+                                        Presented By
+                                        </p>
+
+                                        <div class="bank">
+                                            <div class="bank-item pb-3">
+                                                <img src="frontend/images/midtrans-logo.svg" alt="" class="bank-image">
+                                                <div class="description"></div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Buttons Section -->
+                            <div class="join-container">
+                                <a href="success.html" class="btn btn-block btn-join-now mt-3 py-2">I Have Made
+                                    Payment</a>
+                            </div>
+                            <div class="text-center mt-3 mb-lg-5">
+                                <a href="#" class="text-muted">Cancel Booking</a>
+                            </div>
+                        </div>
+
+
+
+                        <!--<div class="col-lg-4">
+
+                            <!~~ Centered Nav tabs ~~>
+                            <ul class="nav nav-tabs d-flex justify-content-center custom-nav-tabs mb-4" id="paymentTabs"
+                                role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="downpayment-tab" data-toggle="tab"
+                                        href="#downpayment" role="tab" aria-controls="downpayment"
+                                        aria-selected="true">Down Payment</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="fullpayment-tab" data-toggle="tab" href="#fullpayment"
+                                        role="tab" aria-controls="fullpayment" aria-selected="false">Full Payment</a>
+                                </li>
+                            </ul>
+
+                            <div class="card card-details card-right" id="paymentTabsContent">
                                 <h2>Checkout Information</h2>
                                 <table class="trip-informations">
                                     <tr>
@@ -181,106 +321,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="join-container">
-                            <a href="success.html" class="btn btn-block btn-join-now mt-3 py-2">I Have Made Payment</a>
-                        </div>
-                        <div class="text-center mt-3">
-                            <a href="#" class="text-muted">Cancel Booking</a>
-                        </div> -->
-                        </div>
+                        </div>-->
 
                         <!-- Card Bawah -->
-                        <div class="pl-0 col-lg-12 mt-4">
-                            <!-- Centered Nav tabs -->
-                            <ul class="nav nav-tabs d-flex justify-content-center custom-nav-tabs" id="paymentTabs"
-                                role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="downpayment-tab" data-toggle="tab"
-                                        href="#downpayment" role="tab" aria-controls="downpayment"
-                                        aria-selected="true">Down Payment</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="fullpayment-tab" data-toggle="tab" href="#fullpayment"
-                                        role="tab" aria-controls="fullpayment" aria-selected="false">Full Payment</a>
-                                </li>
-                            </ul>
 
-                            <!-- Tab content -->
-                            <div class="tab-content mt-4" id="paymentTabsContent">
-                                <!-- Down Payment Tab -->
-                                <div class="tab-pane fade show active" id="downpayment" role="tabpanel"
-                                    aria-labelledby="downpayment-tab">
-                                    <div class="card card-details card-right">
-                                        <h2>Down Payment Information</h2>
-                                        <p>Anda perlu melunasi pembayaran secara cash pada saat hari keberangkatan</p>
-                                        <table class="trip-informations">
-                                            <tr>
-                                                <th width="50%">Payment</th>
-                                                <td width="50%" class="text-right text-blue">Down Payment 30%</td>
-                                            </tr>
-                                            <tr>
-                                                <th width="50%">Sub Total</th>
-                                                <td width="50%" class="text-right text-blue">Rp 1.500.000</td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <th width="50%">PPN 11%</th>
-                                                <td width="50%" class="text-right text-blue">Rp 150.000</td>
-                                            </tr>
-                                            <tr>
-                                                <th width="50%">Grand Total</th>
-                                                <td width="50%" class="text-right text-total">
-                                                    <span class="text-blue">Rp 150.000</span>
-                                                    <!-- <span class="text-orange">33</span> -->
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <!-- Full Payment Tab -->
-                                <div class="tab-pane fade" id="fullpayment" role="tabpanel"
-                                    aria-labelledby="fullpayment-tab">
-                                    <div class="card card-details card-right">
-                                        <h2>Full Payment Information</h2>
-                                        <p>Anda tidak perlu membayar biaya tambahan apapun pada saat hari keberangkatan
-                                        </p>
-                                        <table class="trip-informations">
-                                            <tr>
-                                                <th width="50%">Payment</th>
-                                                <td width="50%" class="text-right text-blue">Full Payment </td>
-                                            </tr>
-                                            <tr>
-                                                <th width="50%">Sub Total</th>
-                                                <td width="50%" class="text-right text-blue">Rp 5.550.000</td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <th width="50%">PPN 11%</th>
-                                                <td width="50%" class="text-right text-blue">Rp 150.000</td>
-                                            </tr>
-                                            <tr>
-                                                <th width="50%">Grand Total</th>
-                                                <td width="50%" class="text-right text-total">
-                                                    <span class="text-blue">Rp 5.700.000</span>
-                                                    <!-- <span class="text-orange">33</span> -->
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <hr>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Buttons Section -->
-                            <div class="join-container">
-                                <a href="success.html" class="btn btn-block btn-join-now mt-3 py-2">I Have Made
-                                    Payment</a>
-                            </div>
-                            <div class="text-center mt-3 mb-lg-5">
-                                <a href="#" class="text-muted">Cancel Booking</a>
-                            </div>
-                        </div>
 
 
 
@@ -316,19 +360,19 @@
                     <div class="col col-footer" id="services">
                         <h3>Services</h3>
                         <div class="links">
-                            <a href="#">Ilustration</a>
-                            <a href="#">Ilustration</a>
-                            <a href="#">Ilustration</a>
-                            <a href="#">Ilustration</a>
+                            <a href="#">Overview</a>
+                            <a href="#">My Booking</a>
+                            <a href="#">Contact Us</a>
+                            <a href="#">Settings</a>
                         </div>
                     </div>
                     <div class="col col-footer" id="useful-link">
                         <h3>Links</h3>
                         <div class="links">
-                            <a href="#">About</a>
-                            <a href="#">About</a>
-                            <a href="#">About</a>
-                            <a href="#">About</a>
+                            <a href="#">Home</a>
+                            <a href="#">Destinations</a>
+                            <a href="#">Booking</a>
+                            <a href="#">Testimonials</a>
                         </div>
                     </div>
 

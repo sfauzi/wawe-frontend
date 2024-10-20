@@ -502,6 +502,12 @@ main .recent_order .detail-button {
   cursor: pointer;
 }
 
+.detail-button:hover {
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
+}
+
 .table-responsive {
   overflow-x: auto; /* Enable horizontal scrolling */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
@@ -726,7 +732,7 @@ main .settings .edit-profile-button {
   width: calc(100% - 20px);
   padding: 10px;
   border-radius: 20px; /* Rounded corners */
-  background-color: #f0f0f0; /* Gray background */
+  background-color: #F4F6F8; /* Gray background */
   font-size: 14px;
   box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
@@ -735,7 +741,7 @@ main .settings .edit-profile-button {
   width: calc(100% - 20px);
   padding: 10px;
   border-radius: 20px; /* Rounded corners */
-  background-color: #f0f0f0; /* Gray background */
+  background-color: #F4F6F8; /* Gray background */
   font-size: 14px;
   box-sizing: border-box; /* Ensures padding and border are included in the width */
   resize: vertical; /* Allows vertical resizing only */
@@ -749,6 +755,7 @@ main .settings .edit-profile-button {
 
 .btn-submit {
   width: calc(100% - 20px); /* Match the width to input fields */
+  margin-left: -15px;
   padding: 10px;
   background-color: coral;
   color: white;
@@ -764,7 +771,9 @@ main .settings .edit-profile-button {
 }
 
 .btn-submit:hover {
-  background-color: rgb(250, 147, 110);
+  box-shadow: 0 0 0 0.25rem rgba(253, 181, 13, 0.2509803922) !important;
+  background-color: coral;
+  transition: all 0.4s;
 }
 
 /* Info Card Styles */
