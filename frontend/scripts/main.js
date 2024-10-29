@@ -49,9 +49,25 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
-
 // TOMBOL FILTER CATALOG DI MOBILE
-function toggleMobileMenu() {
-  const mobileMenu = document.querySelector('.mobile-menu');
-  mobileMenu.classList.toggle('active');
+function toggleMobileMenu () {
+  const mobileMenu = document.querySelector('.mobile-menu')
+  mobileMenu.classList.toggle('active')
 }
+
+// Show the login popup when the login button is clicked
+// Show the login popup when the login button is clicked
+document.querySelectorAll('#login-btn').forEach(function (button) {
+  button.addEventListener('click', function (event) {
+    event.preventDefault()
+    document.getElementById('login-popup').style.display = 'flex'
+  })
+})
+
+// Hide the popup if clicked outside of the card
+window.addEventListener('click', function (event) {
+  const popup = document.getElementById('login-popup')
+  if (event.target === popup) {
+    popup.style.display = 'none'
+  }
+})

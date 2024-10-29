@@ -26,6 +26,51 @@
     </head>
 
     <body>
+
+        <!-- Login Popup (this part is added to the index.html) -->
+        <div id="login-popup" class="login-popup">
+            <div class="card login-card">
+                <div class="row no-gutters">
+                    <!-- Left side with background image -->
+                    <div class="col-md-6 login-image"></div>
+
+                    <!-- Right side with login form -->
+                    <div class="col-md-6">
+                        <div class="card-body login-content">
+                            <h2 class="title-login">Login</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control rounded-input" id="email"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control rounded-input" id="password"
+                                        placeholder="Password">
+                                </div>
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                                <div class="action-buttons">
+                                    <button type="submit" class="login-button"
+                                        onclick="window.location.href = 'index.html';">Login</button>
+                                    <button type="button" class="register-button"
+                                        onclick="window.location.href = 'register.html';">Register</button>
+                                </div>
+
+                                <hr>
+                                <div class="action-buttons">
+                                    <button type="button" class="btn-dark google"
+                                        onclick="window.location.href = 'register.html';">
+                                        <img src="frontend/images/icons/icon-google.svg" alt="Google Icon" class="google-icon">
+                                        Masuk/Daftar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Navbar -->
         <div class="container">
             <nav class="row navbar navbar-expand-lg navbar-light bg-white" id="navbar">
@@ -58,7 +103,7 @@
                         </li>
                     </ul>
                     <!-- Tambahkan tombol login di dalam collapse agar muncul di mobile -->
-                    <a href="login.html" class="btn btn-login ml-auto d-lg-none">Login</a>
+                    <a href="#" id="login-btn" class="btn btn-login ml-auto d-lg-none">Login</a>
 
                     <!-- Profil untuk mobile di dalam collapse -->
                     <div class="navbar-profile-mobile d-lg-none mt-3 text-center">
@@ -67,7 +112,7 @@
                     </div>
                 </div>
                 <!-- Tambahkan elemen profil di sini -->
-                <div class="navbar-profile d-none d-lg-flex align-items-center ml-auto">
+                <!--<div class="navbar-profile d-none d-lg-flex align-items-center ml-auto">
                     <span class="profile-name ml-2">John Doe</span>
                     <div class="dropdown">
                         <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -75,7 +120,7 @@
                             <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo" />
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <!-- Konten dropdown -->
+                            <!~~ Konten dropdown ~~>
                             <a class="dropdown-item" href="dashboard.html">Overview</a>
                             <a class="dropdown-item" href="ticket.html">My Ticket</a>
                             <a class="dropdown-item" href="transaction.html">My Transaction</a>
@@ -84,10 +129,11 @@
                             <a class="dropdown-item" href="login.html">Logout</a>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <!-- <a href="register.html" class="btn btn-register d-none d-lg-inline-block ml-lg-3">Register</a> -->
-                <!-- <a href="login.html" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</a> -->
+                <!-- <a href="#" id="login-btn" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</a> -->
+                <button id="login-btn" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</button>
             </nav>
         </div>
 
@@ -160,6 +206,7 @@
             </div>
         </section>
 
+
         <main>
             <div class="container">
                 <!-- Statistik -->
@@ -230,6 +277,8 @@
                 </div>
             </section> -->
             </div>
+
+
 
             <!-- Popular -->
             <section class="section-popular" id="popular">
@@ -375,8 +424,8 @@
                         <p>Discover how we have helped our clients achieve their goals.</p>
                         <div class="buttons">
                             <button class="btn-primary">Get Started</button>
-                            <button class="btn-secondary" 
-                            onclick="window.location.href = 'testimonials.html';">Learn More</button>
+                            <button class="btn-secondary" onclick="window.location.href = 'testimonials.html';">Learn
+                                More</button>
                         </div>
                     </div>
                     <div class="testimonial-right">
