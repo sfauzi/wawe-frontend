@@ -1,0 +1,131 @@
+<mjml>
+  <mj-head>
+    <mj-title>WaWe Tour and Travel</mj-title>
+    <mj-font name="Assistant" href="https://fonts.googleapis.com/css?family=Assistant:400,700" />
+    <mj-attributes>
+      <mj-all font-family="Assistant, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#E4E5EB">
+    <!-- Title Section -->
+    <mj-section padding="20px 20px 0px 20px">
+      <mj-column>
+        <mj-text align="center" font-size="24px" font-weight="bold" color="#071C4D">
+          <h2 style="margin: 0;">WaWe Tour and Travel</h2>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Payment Info Card -->
+    <mj-section padding-top="20px" padding-bottom="0">
+      <mj-column width="90%">
+        <mj-wrapper background-color="#ffffff" border-radius="8px" padding="20px">
+          <!-- Date -->
+          <mj-text align="center" font-size="14px" color="#6c757d" padding-bottom="10px">
+            Thursday, 7 November 2024
+          </mj-text>
+
+          <!-- Total Payment -->
+          <mj-text align="center" font-size="24px" font-weight="bold" color="#071C4D" padding-bottom="20px" padding-top="10px">
+            Rp 2,500,000
+          </mj-text>
+
+          <!-- Transaction Details -->
+          <mj-section padding="0">
+            <mj-column width="100%">
+              <mj-table padding="10px">
+                <tr>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 14px; text-align: left;">Status</td>
+                  <td style="width: 50%; padding: 10px; text-align: right;">
+                    <span style="background-color: #ff9800; color: white; font-size: 16px; font-weight: bold; padding: 5px 10px; border-radius: 8px;">
+                      KEDALUARSA
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 14px; text-align: left;">Order ID</td>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 16px; font-weight: bold; text-align: right;">#ORDER123</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 14px; text-align: left;">Payment Method</td>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 16px; font-weight: bold; text-align: right;">Bank Transfer</td>
+                </tr>
+              </mj-table>
+            </mj-column>
+          </mj-section>
+        </mj-wrapper>
+      </mj-column>
+    </mj-section>
+
+    <!-- Virtual Account Card -->
+    <mj-section padding-top="0" padding-bottom="0px">
+      <mj-column width="90%">
+        <mj-wrapper background-color="#ffffff" border-radius="8px" padding="20px">
+          <mj-section padding="0">
+            <mj-column width="100%">
+              <mj-text align="left" font-size="16px" color="#071C4D" padding-left="20px">
+
+                Dear <strong>S Fauzi</strong> <br>Maaf, pesanan Anda telah kedaluwarsa. Silakan kembali ke website WaWe Tour and Travel untuk melakukan pemesanan ulang.
+              </mj-text>
+
+
+            </mj-column>
+          </mj-section>
+
+          <!-- Alert Box -->
+
+
+          
+
+          <mj-section padding-top="10px">
+            <mj-column width="100%">
+              <mj-text align="left" font-size="16px" color="#071C4D" padding-left="20px">
+
+                <strong>Rincian pesanan</strong>
+              </mj-text>
+
+              <mj-table padding="10px">
+                <tr>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 14px; text-align: left;">Full-Stack Laravel 11 Next JS 14: Web Rent House</td>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 16px; font-weight: bold; text-align: right;">Rp 398,408</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 14px; text-align: left; font-weight: bold;">Total tagihan</td>
+                  <td style="width: 50%; padding: 10px; color: #071C4D; font-size: 16px; font-weight: bold; text-align: right;">
+
+                    Rp 2,500,000</td>
+                </tr>
+
+              </mj-table>
+            </mj-column>
+          </mj-section>
+        </mj-wrapper>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding-top="0" padding-bottom="20px">
+      <mj-column width="90%">
+        <mj-wrapper background-color="#ffffff" border-radius="8px" padding="20px">
+
+
+          <mj-section padding-top="0">
+            <mj-column width="100%">
+              <mj-text align="left" font-size="16px" color="#071C4D" padding-left="20px">
+                Untuk informasi lebih lanjut, silakan hubungi tim support WaWe Tour and Travel via e-mail <strong>team@wawe.com</strong> .
+
+              </mj-text>
+              <mj-text align="left" font-size="12px" color="#071C4D" padding-left="20px">
+                Anda mendapat e-mail ini karena telah bertransaksi di WaWe Tour and Travel yang bekerja sama dengan Midtrans untuk pembayaran yang aman dan terpercaya.
+              </mj-text>
+            </mj-column>
+          </mj-section>
+
+
+        </mj-wrapper>
+      </mj-column>
+    </mj-section>
+
+
+
+  </mj-body>
+</mjml>
