@@ -534,9 +534,93 @@ main .recent_order .detail-button {
 
 .table-responsive {
   overflow-x: auto;
-  /* Enable horizontal scrolling */
   -webkit-overflow-scrolling: touch;
-  /* Enable smooth scrolling on iOS */
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  background: var(--clr-white);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.table-responsive::-webkit-scrollbar {
+  display: none;
+}
+
+/* Table Base Styles */
+.order-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Header Styles */
+.order-table thead th {
+  background-color: var(--clr-white);
+  padding: 1rem;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid rgba(119, 119, 119, 0.1450980392);
+  white-space: nowrap;
+}
+
+/* Table Body Styles */
+.order-table tbody tr {
+  height: auto;
+  transition: background-color 0.3s ease;
+}
+
+.order-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.order-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--clr-white);
+}
+
+/* Remove border from last row */
+.order-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Product name styles dengan hover effect */
+.product-name {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  cursor: pointer;
+  max-width: 250px;
+  /* Tambahan untuk membatasi lebar */
+}
+
+/* Hover effect untuk product name yang panjang */
+.product-name:hover {
+  white-space: normal;
+  overflow: visible;
+  position: relative;
+}
+
+/* Tooltip untuk product name panjang saat di-hover */
+.product-name:hover::before {
+  content: attr(title);
+  position: absolute;
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 1000;
+  width: -moz-max-content;
+  width: max-content;
+  /* Menyesuaikan dengan panjang konten */
+  max-width: 300px;
+  /* Maksimal lebar tooltip */
+  top: 100%;
+  left: 0;
+  word-wrap: break-word;
+  /* Memastikan text panjang wrap dengan baik */
 }
 
 @media (max-width: 767px) {
