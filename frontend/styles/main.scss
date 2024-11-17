@@ -555,7 +555,7 @@ body {
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 70px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -3392,7 +3392,7 @@ footer {
 // ** CATALOG ** //
 
 .catalogue {
-    padding: 50px;
+    padding: 50px 100px;
     justify-content: center;
 }
 
@@ -3419,8 +3419,77 @@ footer {
     margin-top: 50px;
 }
 
+/* Tooltip Icon */
+.tooltip-icon.package-catalog {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Icon style with circle background */
+.icon-img.package-catalog {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    // margin-left: 8px;
+    background-color: #0ff47e3b;
+    /* Circle background color */
+    border-radius: 50%;
+    /* Circle shape */
+    color: #0ff47e;
+    /* Icon color */
+    font-size: 12px;
+    // font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    /* Vertically center text */
+    cursor: pointer;
+    position: relative;
+}
+
+/* Tooltip text */
+.tooltip-text.package-catalog {
+    display: none;
+    position: absolute;
+    top: -90px;
+    left: -185px !important;
+    background-color: #fff;
+    /* White background */
+    color: #333;
+    /* Dark text color */
+    padding: 15px;
+    /* Padding around text */
+    border-radius: 8px;
+    /* Rounded border */
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: 500 !important;
+    z-index: 1000 !important;
+    width: 220px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    /* Optional: Shadow for tooltip */
+    /* Set a maximum width for long text */
+    white-space: normal;
+    /* Allows text to wrap onto the next line */
+    word-wrap: break-word;
+}
+
+.tooltip-text.package-catalog h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0ff47e;
+}
+
+
+/* Show tooltip on hover */
+.tooltip-icon.package-catalog:hover .tooltip-text.package-catalog {
+    display: block;
+}
+
+
 .menu {
-    width: 25%;
+    width: 50%;
     // border-right: 2px solid #ddd;
     padding-right: 15px;
     padding-left: 30px;
@@ -3518,6 +3587,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    padding: 0 70px;
 }
 
 .card-link {
@@ -3766,6 +3836,10 @@ footer {
 // }
 
 @media (max-width: 768px) {
+
+    .catalogue {
+        padding: 70px 30px;
+    }
 
     /* Styles for mobile */
 
@@ -4310,237 +4384,7 @@ footer {
 
 //* END TESTIMONIALS *//
 
-//* START LOGIN POP UP *//
 
-#login-popup {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1001;
-}
-
-.login-card {
-    width: 800px;
-    border-radius: 35px;
-    overflow: hidden;
-    border: none;
-    margin-top: 100px;
-    height: 550px;
-    background-color: white;
-    display: grid;
-    /* Smooth transition on the card */
-    /* Using CSS Grid for the layout */
-    /* Two equal columns */
-}
-
-.login-image {
-    background-image: url('../images/landing-1.jpg') !important;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    /* Full height of the parent grid item */
-    width: 100%;
-    /* Ensure full width of the grid column */
-}
-
-.title-login {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-
-.login-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Center content vertically */
-}
-
-.rounded-input {
-    border-radius: 30px;
-    border: none;
-    padding: 20px;
-    background-color: #e5e9f2;
-}
-
-.forgot-password {
-    display: block;
-    text-align: right;
-    margin-bottom: 15px;
-    text-decoration: none !important;
-    color: #999aa4;
-}
-
-.forgot-password:hover {
-    font-weight: 500;
-    color: #999aa4;
-}
-
-
-.btn-login {
-    display: block;
-    margin: 20px;
-}
-
-.action-buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-.login-button,
-.register-button {
-    padding: 12px;
-    background-color: coral;
-    /* Adjust button colors */
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.btn-dark.google {
-    background-color: #34364a;
-    padding: 12px;
-    /* Adjust button colors */
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    display: flex;
-    /* To align icon and text properly */
-    align-items: center;
-    /* Center icon and text vertically */
-    justify-content: center;
-    /* Center the content inside the button */
-}
-
-.google-icon {
-    width: 20px;
-    /* Adjust size of the icon */
-    height: auto;
-    margin-right: 10px;
-    /* Spacing between the icon and text */
-}
-
-.btn-dark.google:hover {
-    box-shadow: 0 0 0 .25rem #53556b44 !important;
-    transition: all .4s;
-}
-
-.register-button {
-    background-color: #ddd;
-    /* Adjust register button color */
-    color: #666;
-}
-
-.login-button:hover,
-.register-button:hover {
-    opacity: 0.8;
-}
-
-/* For tablet devices (screen width less than or equal to 768px) */
-@media (max-width: 768px) {
-    .login-card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        /* Adjust height for better responsiveness */
-        margin-top: -40px;
-    }
-
-    .login-image {
-        display: none;
-        /* Hide the image on tablets and smaller devices */
-    }
-
-    .login-content {
-        padding: 20px;
-        justify-content: flex-start;
-        /* Adjust padding and content alignment for smaller screens */
-    }
-
-    .rounded-input {
-        padding: 15px;
-        /* Adjust input padding for smaller screens */
-    }
-
-    .action-buttons .login-button,
-    .action-buttons .register-button {
-        width: 100%;
-        /* Full width buttons on mobile/tablet */
-        margin: 10px 0;
-        /* Add margin between buttons */
-    }
-}
-
-@media (min-width: 769px) {
-    .login-card {
-        width: 800px;
-        border-radius: 35px;
-        overflow: hidden;
-        border: none;
-        margin-top: 100px;
-        height: 550px;
-        background-color: white;
-        display: grid;
-        margin: 60px;
-
-    }
-
-}
-
-/* For mobile devices (screen width less than or equal to 576px) */
-@media (max-width: 576px) {
-    .login-card {
-        width: 90%;
-        /* Make the card narrower for small screens */
-        height: auto;
-        // margin-top: 50px;
-        padding: 20px;
-        /* Adjust margin for mobile */
-    }
-
-    .login-content {
-        padding: 15px;
-        /* Reduce padding on mobile */
-    }
-
-    .rounded-input {
-        padding: 12px;
-        /* Further reduce input padding for mobile */
-    }
-
-    .btn-login,
-    .btn-register {
-        padding: 10px;
-        font-size: 14px;
-        /* Adjust button font size */
-    }
-
-    .action-buttons .login-button,
-    .action-buttons .register-button {
-        margin: 8px 0;
-        /* Tighter spacing between buttons */
-    }
-}
-
-//* END LOGIN POP UP *//
 
 //* START TERMS POP UP *//
 #terms-popup {
@@ -4716,3 +4560,307 @@ footer {
 }
 
 //* END TERMS POP UP *//
+
+
+// ** START SECTION PACKAGE POP **//
+
+/* Existing styles remain the same */
+.section-package-popular {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 0 100px;
+    text-align: center;
+    width: 100%;
+}
+
+.card-container-popular {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Rest of the existing card styles remain the same */
+.card {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    overflow: hidden !important;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card.card-package img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content-popular {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.card-content-popular a {
+    text-decoration: none;
+    color: #071C4D;
+}
+
+/* Updated card title styling */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 5px 0;
+    cursor: pointer;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: fit-content;
+    min-height: calc(1.2em * 1);
+    /* Minimum height for 2 lines */
+}
+
+/* Updated hover effect */
+.card-title:hover {
+    -webkit-line-clamp: unset;
+    height: auto;
+}
+
+/* Rest of the styling remains the same */
+.card-description {
+    font-size: 14px;
+    margin: 5px 0 10px;
+}
+
+.card-rating {
+    margin: 5px 0 10px;
+    color: #FFD700;
+}
+
+.card-rating i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.view-details {
+    display: none;
+    background-color: #2447f9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.view-details:hover {
+    box-shadow: 0 0 0 .25rem #0d6efd40 !important;
+}
+
+/* Price container untuk layout horizontal */
+.price-container {
+    display: flex;
+    align-items: center;
+    /* Menengahkan item secara vertikal */
+    gap: 12px;
+    margin: 5px 0 10px;
+    height: 20px;
+    /* Set fixed height untuk container */
+}
+
+/* Reset margin dari card-description dan set line-height yang sama */
+.card-description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    /* Match dengan height container */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling untuk harga yang dicoret */
+.price-discount {
+    font-size: 14px;
+    color: #ff3b3b;
+    text-decoration: line-through;
+    position: relative;
+    animation: blink 1.5s infinite;
+    font-weight: 500;
+    line-height: 20px;
+    /* Match dengan height container */
+    display: flex;
+    align-items: center;
+    margin: 0;
+    /* Reset margin */
+}
+
+/* Tooltip Icon */
+.tooltip-icon.package {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Icon style with circle background */
+.icon-img.package {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    // margin-left: 8px;
+    background-color: #0ff47e3b;
+    /* Circle background color */
+    border-radius: 50%;
+    /* Circle shape */
+    color: #0ff47e;
+    /* Icon color */
+    font-size: 12px;
+    // font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    /* Vertically center text */
+    cursor: pointer;
+    position: relative;
+}
+
+/* Tooltip text */
+.tooltip-text.package {
+    display: none;
+    position: absolute;
+    top: -90px;
+    left: -190px !important;
+    background-color: #fff;
+    /* White background */
+    color: #333;
+    /* Dark text color */
+    padding: 15px;
+    /* Padding around text */
+    border-radius: 8px;
+    /* Rounded border */
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: 500 !important;
+    z-index: 1000 !important;
+    width: 250px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    /* Optional: Shadow for tooltip */
+    /* Set a maximum width for long text */
+    white-space: normal;
+    /* Allows text to wrap onto the next line */
+    word-wrap: break-word;
+}
+
+.tooltip-text.package h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0ff47e;
+}
+
+
+/* Show tooltip on hover */
+.tooltip-icon.package:hover .tooltip-text.package {
+    display: block;
+}
+
+
+
+/* Animasi kedip */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Garis coret custom */
+.price-discount::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1.5px;
+    // background-color: #ff3b3b;
+    // transform: translateY(-50%) rotate(-8deg);
+}
+
+
+
+/* Responsive adjustments */
+// @media (max-width: 400px) {
+//     .price-container {
+//         flex-direction: column;
+//         align-items: flex-start;
+//         height: auto;
+//         gap: 4px;
+//     }
+
+//     .card-description,
+//     .price-discount {
+//         height: 20px;
+//     }
+// }
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+    .card-container-popular {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .card-container-popular {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-package-popular {
+        padding: 20px;
+        margin: auto;
+    }
+
+
+    .card-container-popular {
+        grid-template-columns: 1fr;
+    }
+}
+
+// .card:hover .view-details {
+//     display: block;
+//     /* Show button on card hover */
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+
+//     /* Space above the button */
+// }
+
+
+// ** END SECTION PACKAGE POP **//
