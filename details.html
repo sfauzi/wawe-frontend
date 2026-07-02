@@ -1,309 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet">
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="frontend/styles/main.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="frontend/styles/main.css">
 
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <!-- Navbar -->
-    <div class="container">
-        <nav class="row navbar navbar-expand-lg navbar-light bg-white" id="navbar">
-            <a href="#" class="navbar-brand">
-                <img src="frontend/images/logo.svg" alt="Logo WaWe" />
-            </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navb">
-                <span class="navbar-toggler-icon"></span>
+        <!-- Navbar -->
+        <div class="container">
+            <nav class="row navbar navbar-expand-lg navbar-light bg-white" id="navbar">
+                <a href="#" class="navbar-brand">
+                    <img src="frontend/images/logo.svg" alt="Logo WaWe" />
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navb">
+                    <span class="navbar-toggler-icon"></span>
 
-            </button>
+                </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navb">
-                <ul class="navbar-nav">
-                    <li class="nav-item mx-md-2"><a href="#" class="nav-link active">Home</a></li>
-                    <li class="nav-item mx-md-2"><a href="#" class="nav-link">Destinations</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-                            Booking
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Ticket</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mx-md-2"><a href="#" class="nav-link">Testimonial</a></li>
-                </ul>
-                <!-- Tambahkan tombol login di dalam collapse agar muncul di mobile -->
-                <a href="login.html" class="btn btn-login ml-auto d-lg-none">Login</a>
+                <div class="collapse navbar-collapse justify-content-center" id="navb">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-md-2"><a href="#" class="nav-link active">Home</a></li>
+                        <li class="nav-item mx-md-2"><a href="#" class="nav-link">Destinations</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                                Booking
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Ticket</a>
+                            </div>
+                        </li>
+                        <li class="nav-item mx-md-2"><a href="#" class="nav-link">Testimonial</a></li>
+                    </ul>
+                    <!-- Tambahkan tombol login di dalam collapse agar muncul di mobile -->
+                    <a href="login.html" class="btn btn-login ml-auto d-lg-none">Login</a>
 
-                <!-- Profil untuk mobile di dalam collapse -->
-                <div class="navbar-profile-mobile d-lg-none mt-3 text-center">
-                    <span class="profile-name ml-2">John Doe</span>
-                    <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo">
-                </div>
-            </div>
-            <!-- Tambahkan elemen profil di sini -->
-            <div class="navbar-profile d-none d-lg-flex align-items-center ml-auto">
-                <span class="profile-name ml-2">John Doe</span>
-                <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <!-- Profil untuk mobile di dalam collapse -->
+                    <div class="navbar-profile-mobile d-lg-none mt-3 text-center">
+                        <span class="profile-name ml-2">John Doe</span>
                         <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo">
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <!-- Konten dropdown -->
-                        <a class="dropdown-item" href="#">My Ticket</a>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
                     </div>
                 </div>
-            </div>
+                <!-- Tambahkan elemen profil di sini -->
+                <div class="navbar-profile d-none d-lg-flex align-items-center ml-auto">
+                    <span class="profile-name ml-2">John Doe</span>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="frontend/images/member.png" alt="Profile Photo" class="profile-photo">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <!-- Konten dropdown -->
+                            <a class="dropdown-item" href="#">My Ticket</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- <a href="login.html" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</a> -->
+                <!-- <a href="login.html" class="btn btn-login d-none d-lg-inline-block ml-auto">Login</a> -->
 
-            <!-- Mobile Button -->
-            <!-- <form class="form-inline d-sm-block d-md-none">
+                <!-- Mobile Button -->
+                <!-- <form class="form-inline d-sm-block d-md-none">
                 <button class="btn btn-login my-2 my-sm-0">
                     Masuk
                 </button>
             </form> -->
 
-            <!-- Desktop Button -->
-            <!-- <form class="form-inline my-2 my-lg-0 d-none d-md-block">
+                <!-- Desktop Button -->
+                <!-- <form class="form-inline my-2 my-lg-0 d-none d-md-block">
                 <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
                     Masuk
                 </button>
             </form> -->
-        </nav>
-    </div>
+            </nav>
+        </div>
 
-    <main>
-        <!-- Breadcrumbs -->
-        <section class="section-details-header"></section>
-        <section class="section-details-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col p-0">
-                        <nav>
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    Catalog
-                                </li>
-                                <li class="breadcrumb-item active">
-                                    Details
-                                </li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-
-
-                <section class="details-section">
-                    <div class="gallery">
-                        <div class="xzoom-main">
-                            <div class="xzoom-container">
-                                <img src="frontend/images/header.jpg" alt="Details gambar" class="xzoom"
-                                    id="xzoom-default" xoriginal="frontend/images/header.jpg">
-                            </div>
-                        </div>
-                        <div class="xzoom-thumbs">
-                            <a href="frontend/images/header.jpg">
-                                <img src="frontend/images/header.jpg" class="xzoom-gallery" width="128"
-                                    xpreview="frontend/images/header.jpg" alt="">
-                            </a>
-                            <a href="frontend/images/landing.png">
-                                <img src="frontend/images/landing.png" class="xzoom-gallery" width="128"
-                                    xpreview="frontend/images/landing.png" alt="">
-                            </a>
-                            <a href="frontend/images/landing-1.jpg">
-                                <img src="frontend/images/landing-1.jpg" class="xzoom-gallery" width="128"
-                                    xpreview="frontend/images/landing-1.jpg" alt="">
-                            </a>
-                            <!-- Tambahkan gambar thumbnail lainnya di sini -->
+        <main>
+            <!-- Breadcrumbs -->
+            <section class="section-details-header"></section>
+            <section class="section-details-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col p-0">
+                            <nav>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        Catalog
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        Details
+                                    </li>
+                                </ol>
+                            </nav>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <div class="category-badge">Category</div>
-                        <div class="title-and-testimonials">
-                            <h1 class="product__title">Product Title</h1>
-                            <span class="testimonials">123 Testimonials</span>
+
+
+                    <section class="details-section">
+                        <div class="gallery">
+                            <div class="xzoom-main">
+                                <div class="xzoom-container">
+                                    <img src="frontend/images/header.jpg" alt="Details gambar" class="xzoom"
+                                        id="xzoom-default" xoriginal="frontend/images/header.jpg">
+                                </div>
+                            </div>
+                            <div class="xzoom-thumbs">
+                                <a href="frontend/images/header.jpg">
+                                    <img src="frontend/images/header.jpg" class="xzoom-gallery" width="128"
+                                        xpreview="frontend/images/header.jpg" alt="">
+                                </a>
+                                <a href="frontend/images/landing.png">
+                                    <img src="frontend/images/landing.png" class="xzoom-gallery" width="128"
+                                        xpreview="frontend/images/landing.png" alt="">
+                                </a>
+                                <a href="frontend/images/landing-1.jpg">
+                                    <img src="frontend/images/landing-1.jpg" class="xzoom-gallery" width="128"
+                                        xpreview="frontend/images/landing-1.jpg" alt="">
+                                </a>
+                                <!-- Tambahkan gambar thumbnail lainnya di sini -->
+                            </div>
                         </div>
-                        <div class="product-features">
-                            <div class="feature">
-                                <!-- <ion-icon name="calendar-outline" class="icon"></ion-icon> -->
-                                <img src="frontend/images/icons/calendar.png" alt="Facebook Icon" class="icon">
-                                <span>Feature 1</span>
+                        <div class="product-info">
+                            <div class="category-badge">Category</div>
+                            <div class="title-and-testimonials">
+                                <h1 class="product__title">Product Title</h1>
+                                <span class="testimonials">123 Testimonials</span>
                             </div>
-                            <div class="feature">
-                                <!-- <ion-icon name="calendar-outline" class="icon"></ion-icon> -->
-                                <img src="frontend/images/icons/people.png" alt="Facebook Icon" class="icon">
-                                <span>Feature 1</span>
+                            <div class="product-features">
+                                <div class="feature">
+                                    <!-- <ion-icon name="calendar-outline" class="icon"></ion-icon> -->
+                                    <img src="frontend/images/icons/calendar.png" alt="Facebook Icon" class="icon">
+                                    <span>Feature 1</span>
+                                </div>
+                                <div class="feature">
+                                    <!-- <ion-icon name="calendar-outline" class="icon"></ion-icon> -->
+                                    <img src="frontend/images/icons/people.png" alt="Facebook Icon" class="icon">
+                                    <span>Feature 1</span>
+                                </div>
+                                <div class="feature">
+                                    <!-- <ion-icon name="calendar-outline" class="icon"></ion-icon> -->
+                                    <img src="frontend/images/icons/tag.png" alt="Facebook Icon" class="icon">
+                                    <span>Feature 1</span>
+                                </div>
+                                <div class="feature">
+                                    <!-- <ion-icon name="calendar-outline" class="icon"></ion-icon> -->
+                                    <img src="frontend/images/icons/dollar-circle.png" alt="Facebook Icon" class="icon">
+                                    <span>Feature 1</span>
+                                </div>
+
+                                <!-- Tambahkan feature lainnya di sini -->
                             </div>
-                            <div class="feature">
-                                <!-- <ion-icon name="calendar-outline" class="icon"></ion-icon> -->
-                                <img src="frontend/images/icons/tag.png" alt="Facebook Icon" class="icon">
-                                <span>Feature 1</span>
+                            <div class="seller-card">
+                                <img src="frontend/images/avatar.png" alt="Seller Image" class="seller-image">
+                                <div class="seller-info">
+                                    <h2 class="seller-name">Seller Name</h2>
+                                    <p class="seller-description">Brief description of the seller</p>
+                                </div>
+                                <button class="contact-seller-btn">Contact Admin</button>
                             </div>
-                            <div class="feature">
-                                <!-- <ion-icon name="calendar-outline" class="icon"></ion-icon> -->
-                                <img src="frontend/images/icons/dollar-circle.png" alt="Facebook Icon" class="icon">
-                                <span>Feature 1</span>
+                        </div>
+                    </section>
+
+                    <section class="product-description">
+                        <h3>About the Product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, vitae quisquam?
+                            Accusamus
+                            ex repellendus sit facilis possimus temporibus earum veniam vero, unde libero hic quasi
+                            voluptatum labore enim expedita eum! Nam saepe veritatis corrupti repellendus voluptatem
+                            veniam
+                            beatae atque reiciendis tempora fugiat, explicabo pariatur omnis quia officiis eum dolore
+                            quibusdam molestiae, at possimus doloremque repellat labore voluptas! Natus velit tempore
+                            impedit in iure dolore ut animi odit, nam culpa officia? Aperiam est, tempora quidem magni
+                            fuga
+                            deserunt quos impedit ipsum, veniam accusamus nisi cupiditate eum quo ullam ipsam voluptate
+                            ex
+                            harum omnis! Magnam dolorem id distinctio dolores consequatur possimus perspiciatis?</p>
+                        <div class="additional-info">
+                            <div class="info-card">
+                                <!-- <i class="material-icons icon">check</i> -->
+                                <div class="icons-details">
+                                    <img src="frontend/images/icons/tick-circle.png" alt="Check Icon"
+                                        class="icon-detail-img">
+                                </div>
+
+                                <div class="info-content">
+                                    <h4>List Features</h4>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <!-- <i class="material-icons icon">check</i> -->
+                                <div class="icons-details">
+                                    <img src="frontend/images/icons/tick-circle.png" alt="Check Icon"
+                                        class="icon-detail-img">
+                                </div>
+                                <div class="info-content">
+                                    <h4>List Features</h4>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <!-- <i class="material-icons icon">check</i> -->
+                                <div class="icons-details">
+                                    <img src="frontend/images/icons/tick-circle.png" alt="Check Icon"
+                                        class="icon-detail-img">
+                                </div>
+                                <div class="info-content">
+                                    <h4>List Features</h4>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <!-- <i class="material-icons icon">check</i> -->
+                                <div class="icons-details">
+                                    <img src="frontend/images/icons/tick-circle.png" alt="Check Icon"
+                                        class="icon-detail-img">
+                                </div>
+                                <div class="info-content">
+                                    <h4>List Features</h4>
+                                </div>
                             </div>
 
-                            <!-- Tambahkan feature lainnya di sini -->
                         </div>
-                        <div class="seller-card">
-                            <img src="frontend/images/avatar.png" alt="Seller Image" class="seller-image">
-                            <div class="seller-info">
-                                <h2 class="seller-name">Seller Name</h2>
-                                <p class="seller-description">Brief description of the seller</p>
+                    </section>
+
+                    <div class="details-container">
+                        <!-- Testimonies Section -->
+                        <aside class="testimonies-card">
+                            <h3 class="testimonies-header">From Happy Customers</h3>
+                            <div class="testimoni-card">
+                                <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
+                                <div>
+                                    <p>"Great experience!"</p>
+                                    <small>- John Doe</small>
+                                </div>
                             </div>
-                            <button class="contact-seller-btn">Contact Admin</button>
-                        </div>
+                            <div class="testimoni-card">
+                                <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
+                                <div>
+                                    <p>"Amazing service!"</p>
+                                    <small>- Jane Doe</small>
+                                </div>
+                            </div>
+                            <div class="testimoni-card">
+                                <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
+                                <div>
+                                    <p>"Would definitely recommend!"</p>
+                                    <small>- Alice Smith</small>
+                                </div>
+                            </div>
+                            <div class="testimoni-card">
+                                <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
+                                <div>
+                                    <p>"Great value for money!"</p>
+                                    <small>- Bob Johnson</small>
+                                </div>
+                            </div>
+                            <div class="testimoni-card">
+                                <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
+                                <div>
+                                    <p>"Very satisfied!"</p>
+                                    <small>- Emily Brown</small>
+                                </div>
+                            </div>
+                            <!-- Tambahkan lebih banyak testimonial cards jika diperlukan -->
+                        </aside>
+
+                        <!-- Product Information Section -->
+                        <aside class="card-information">
+                            <div class="price">
+                                <h3>Rp 199.99<span>/day</span></h3>
+                            </div>
+                            <div>
+                                Trip Information
+                                <hr>
+                            </div>
+                            <div class="details">
+                                <h4>Date</h4>
+                                <p>15 Juni 2024</p>
+                                <h4>Location</h4>
+                                <p>Bali, Indonesia</p>
+                                <h4>Duration</h4>
+                                <p>7 Days</p>
+                                <h4>Inclusions</h4>
+                                <p>Flight, Hotel, Meals</p>
+                            </div>
+                            <button class="purchase-btn" onclick="window.location.href = 'checkout.html';">Join
+                                Now</button>
+                        </aside>
                     </div>
-                </section>
-
-                <section class="product-description">
-                    <h3>About the Product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, vitae quisquam? Accusamus
-                        ex repellendus sit facilis possimus temporibus earum veniam vero, unde libero hic quasi
-                        voluptatum labore enim expedita eum! Nam saepe veritatis corrupti repellendus voluptatem veniam
-                        beatae atque reiciendis tempora fugiat, explicabo pariatur omnis quia officiis eum dolore
-                        quibusdam molestiae, at possimus doloremque repellat labore voluptas! Natus velit tempore
-                        impedit in iure dolore ut animi odit, nam culpa officia? Aperiam est, tempora quidem magni fuga
-                        deserunt quos impedit ipsum, veniam accusamus nisi cupiditate eum quo ullam ipsam voluptate ex
-                        harum omnis! Magnam dolorem id distinctio dolores consequatur possimus perspiciatis?</p>
-                    <div class="additional-info">
-                        <div class="info-card">
-                            <!-- <i class="material-icons icon">check</i> -->
-                            <div class="icons-details">
-                                <img src="frontend/images/icons/tick-circle.png" alt="Check Icon"
-                                    class="icon-detail-img">
-                            </div>
-
-                            <div class="info-content">
-                                <h4>List Features</h4>
-                            </div>
-                        </div>
-                        <div class="info-card">
-                            <!-- <i class="material-icons icon">check</i> -->
-                            <div class="icons-details">
-                                <img src="frontend/images/icons/tick-circle.png" alt="Check Icon"
-                                    class="icon-detail-img">
-                            </div>
-                            <div class="info-content">
-                                <h4>List Features</h4>
-                            </div>
-                        </div>
-                        <div class="info-card">
-                            <!-- <i class="material-icons icon">check</i> -->
-                            <div class="icons-details">
-                                <img src="frontend/images/icons/tick-circle.png" alt="Check Icon"
-                                    class="icon-detail-img">
-                            </div>
-                            <div class="info-content">
-                                <h4>List Features</h4>
-                            </div>
-                        </div>
-                        <div class="info-card">
-                            <!-- <i class="material-icons icon">check</i> -->
-                            <div class="icons-details">
-                                <img src="frontend/images/icons/tick-circle.png" alt="Check Icon"
-                                    class="icon-detail-img">
-                            </div>
-                            <div class="info-content">
-                                <h4>List Features</h4>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-                <div class="details-container">
-                    <!-- Testimonies Section -->
-                    <aside class="testimonies-card">
-                        <h3 class="testimonies-header">From Happy Customers</h3>
-                        <div class="testimoni-card">
-                            <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
-                            <div>
-                                <p>"Great experience!"</p>
-                                <small>- John Doe</small>
-                            </div>
-                        </div>
-                        <div class="testimoni-card">
-                            <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
-                            <div>
-                                <p>"Amazing service!"</p>
-                                <small>- Jane Doe</small>
-                            </div>
-                        </div>
-                        <div class="testimoni-card">
-                            <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
-                            <div>
-                                <p>"Would definitely recommend!"</p>
-                                <small>- Alice Smith</small>
-                            </div>
-                        </div>
-                        <div class="testimoni-card">
-                            <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
-                            <div>
-                                <p>"Great value for money!"</p>
-                                <small>- Bob Johnson</small>
-                            </div>
-                        </div>
-                        <div class="testimoni-card">
-                            <img src="frontend/images/member.png" alt="User Photo" class="testimonial-photo">
-                            <div>
-                                <p>"Very satisfied!"</p>
-                                <small>- Emily Brown</small>
-                            </div>
-                        </div>
-                        <!-- Tambahkan lebih banyak testimonial cards jika diperlukan -->
-                    </aside>
-
-                    <!-- Product Information Section -->
-                    <aside class="card-information">
-                        <div class="price">
-                            <h3>Rp 199.99<span>/day</span></h3>
-                        </div>
-                        <div>
-                            Trip Information
-                            <hr>
-                        </div>
-                        <div class="details">
-                            <h4>Date</h4>
-                            <p>15 Juni 2024</p>
-                            <h4>Location</h4>
-                            <p>Bali, Indonesia</p>
-                            <h4>Duration</h4>
-                            <p>7 Days</p>
-                            <h4>Inclusions</h4>
-                            <p>Flight, Hotel, Meals</p>
-                        </div>
-                        <button class="purchase-btn" onclick="window.location.href = 'checkout.html';">Join Now</button>
-                    </aside>
-                </div>
 
 
-                <!-- <aside class="card-information">
+                    <!-- <aside class="card-information">
                     <div class="price">
                         <h3>$199.99<span>/day</span></h3>
                     </div>
@@ -326,8 +331,8 @@
                 </aside> -->
 
 
-                <!-- Detail Content -->
-                <!-- <div class="row">
+                    <!-- Detail Content -->
+                    <!-- <div class="row">
                     <div class="col-lg-8 pl-lg-0">
                         <div class="card card-details">
                             <h1>Curug</h1>
@@ -447,83 +452,83 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
+                </div>
 
-        </section>
-
-
-    </main>
-
-    <!-- Footer -->
+            </section>
 
 
-    <footer>
-        <div class="container container-footer">
-            <div class="row row-footer">
-                <div class="col col-footer" id="company">
-                    <img src="frontend/images/logo.svg" alt="" class="logo-footer" />
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-                        ullam.
-                    </p>
-                    <div class="social">
-                        <!-- <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </main>
+
+        <!-- Footer -->
+
+
+        <footer>
+            <div class="container container-footer">
+                <div class="row row-footer">
+                    <div class="col col-footer" id="company">
+                        <img src="frontend/images/logo.svg" alt="" class="logo-footer" />
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
+                            ullam.
+                        </p>
+                        <div class="social">
+                            <!-- <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
                         <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
                         <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a> -->
-                        <a href="#"><img src="frontend/images/icons/facebook-white.png" alt="Facebook Icon"
-                                class="social-icon" /></a>
-                        <a href="#"><img src="frontend/images/icons/instagram-white.png" alt="Instagram Icon"
-                                class="social-icon" /></a>
-                        <a href="#"><img src="frontend/images/icons/whatsapp-white.png" alt="WhatsApp Icon"
-                                class="social-icon" /></a>
+                            <a href="#"><img src="frontend/images/icons/facebook-white.png" alt="Facebook Icon"
+                                    class="social-icon" /></a>
+                            <a href="#"><img src="frontend/images/icons/instagram-white.png" alt="Instagram Icon"
+                                    class="social-icon" /></a>
+                            <a href="#"><img src="frontend/images/icons/whatsapp-white.png" alt="WhatsApp Icon"
+                                    class="social-icon" /></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-footer" id="services">
-                    <h3>Services</h3>
-                    <div class="links">
-                        <a href="#">Overview</a>
-                        <a href="#">My Booking</a>
-                        <a href="#">Contact Us</a>
-                        <a href="#">Settings</a>
+                    <div class="col col-footer" id="services">
+                        <h3>Services</h3>
+                        <div class="links">
+                            <a href="dashboard.html">Overview</a>
+                            <a href="ticket.html">My Booking</a>
+                            <a href="#">Contact Us</a>
+                            <a href="settings.html">Settings</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-footer" id="useful-link">
-                    <h3>Links</h3>
-                    <div class="links">
-                        <a href="#">Home</a>
-                        <a href="#">Destinations</a>
-                        <a href="#">Booking</a>
-                        <a href="#">Testimonials</a>
+                    <div class="col col-footer" id="useful-link">
+                        <h3>Links</h3>
+                        <div class="links">
+                            <a href="index.html">Home</a>
+                            <a href="destinations.html">Destinations</a>
+                            <a href="ticket.html">Booking</a>
+                            <a href="testimonials.html">Testimonials</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col col-footer" id="contact">
-                    <h3>Contact</h3>
-                    <div class="contact-details-footer">
-                        <!-- <ion-icon name="location-outline"></ion-icon> -->
-                        <img src="frontend/images/icons/location-white.png" alt="" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                    <div class="contact-details-footer">
-                        <!-- <ion-icon name="call-outline"></ion-icon> -->
-                        <img src="frontend/images/icons/call-white.png" alt="" />
-                        <p>+62 123 456 7890</p>
+                    <div class="col col-footer" id="contact">
+                        <h3>Contact</h3>
+                        <div class="contact-details-footer">
+                            <!-- <ion-icon name="location-outline"></ion-icon> -->
+                            <img src="frontend/images/icons/location-white.png" alt="" />
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="contact-details-footer">
+                            <!-- <ion-icon name="call-outline"></ion-icon> -->
+                            <img src="frontend/images/icons/call-white.png" alt="" />
+                            <p>+62 123 456 7890</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container-fluid">
-            <div class="row border-top justify-content-center align-items-center pt-4">
-                <div class="col-auto text-gray-500 font-weight-light">
-                    2024 Copyright WaWe ❤️ All rights reserved
+            <div class="container-fluid">
+                <div class="row border-top justify-content-center align-items-center pt-4">
+                    <div class="col-auto text-gray-500 font-weight-light">
+                        2024 Copyright WaWe ❤️ All rights reserved
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
 
-    <!-- <footer class="section-footer mt-5 mb-4 border-top">
+        <!-- <footer class="section-footer mt-5 mb-4 border-top">
         <div class="container pt-5 pb-5">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -575,21 +580,21 @@
         </div>
     </footer> -->
 
-    <script src="frontend/scripts/main.js"></script>
-    <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
-    <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
-    <script src="frontend/libraries/retina/retina.min.js"></script>
-    <script src="frontend/libraries/xzoom/xzoom.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.xzoom, .xzoom-gallery').xzoom({
-                zoomWidth: 500,
-                title: false,
-                tint: '#333',
-                Xoffset: 15
+        <script src="frontend/scripts/main.js"></script>
+        <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
+        <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+        <script src="frontend/libraries/retina/retina.min.js"></script>
+        <script src="frontend/libraries/xzoom/xzoom.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.xzoom, .xzoom-gallery').xzoom({
+                    zoomWidth: 500,
+                    title: false,
+                    tint: '#333',
+                    Xoffset: 15
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 
 </html>
